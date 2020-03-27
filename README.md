@@ -62,6 +62,28 @@ In terminal 1:
 roslaunch kinova_gazebo robot_launch.launch kinova_robotType:=j2n6s300
 ```
 
+
+Note, if you get an error here, you may need to install the following, as indicated [here](https://github.com/Kinovarobotics/kinova-ros/wiki/Gazebo).
+
+
+```bash
+sudo apt-get install ros-<distro>-gazebo-ros-control
+sudo apt-get install ros-<distro>-ros-controllers*
+sudo apt-get install ros-<distro>-trac-ik-kinematics-plugin
+sudo apt-get install ros-<distro>-effort-controllers 
+sudo apt-get install ros-<distro>-joint-state-controller 
+sudo apt-get install ros-<distro>-joint-trajectory-controller 
+sudo apt-get install ros-<distro>-controller-*
+```
+
+(replace '<distro>' by your ROS distribution, for example 'kinetic' or 'melodic')
+
+
+```bash
+roslaunch kinova_gazebo robot_launch.launch kinova_robotType:=j2n6s300
+```
+
+
 In terminal 2:
 ```bash
 python3 Gazebo/publish_in_topics/test_jaco_gazebo_gym.py
