@@ -76,7 +76,7 @@ sudo apt-get install ros-<distro>-joint-trajectory-controller
 sudo apt-get install ros-<distro>-controller-*
 ```
 
-(replace '<distro>' by your ROS distribution, for example 'kinetic' or 'melodic')
+(replace `<distro>` by your ROS distribution, for example `kinetic` or `melodic`)
 
 
 ```bash
