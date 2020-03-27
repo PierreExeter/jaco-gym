@@ -8,6 +8,7 @@ The environment is implemented both for the real arm and the Gazebo simulator.
 ## Installation
 
 1. Install [ROS](http://wiki.ros.org/ROS/Installation).
+
 ROS Melodic on Ubuntu 18.04
 or 
 ROS Kinetic on Ubuntu 16.04
@@ -27,7 +28,7 @@ catkin_make
 4. Install [Gym](https://github.com/openai/gym).
 
 ```bash
-pip install gym
+pip3 install gym
 ```
 
 5. Install [jaco-gym](https://github.com/PierreExeter/jaco-gym.git).
