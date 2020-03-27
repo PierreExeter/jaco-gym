@@ -4,16 +4,16 @@ The environment is implemented both for the real arm and the Gazebo simulator.
 
 ## Installation
 
-Install [ROS](http://wiki.ros.org/ROS/Installation).
+1. Install [ROS](http://wiki.ros.org/ROS/Installation).
 ROS Melodic on Ubuntu 18.04
 or 
 ROS Kinetic on Ubuntu 16.04
 
 
-Install and configure your [Catkin workspace](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment).
+2. Install and configure your [Catkin workspace](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment).
 
 
-Install [Kinova-ros](https://github.com/Kinovarobotics/kinova-ros) and build.
+3. Install [Kinova-ros](https://github.com/Kinovarobotics/kinova-ros) and build.
 ```bash
 cd ~/catkin_ws/src
 git clone https://github.com/Kinovarobotics/kinova-ros.git
@@ -21,26 +21,29 @@ cd ..
 catkin_make
 ```
 
-Install [Gym](https://github.com/openai/gym).
+4. Install [Gym](https://github.com/openai/gym).
 
 ```bash
 pip install gym
 ```
 
-
-Install [jaco-gym](https://github.com/PierreExeter/jaco-gym.git).
+5. Install [jaco-gym](https://github.com/PierreExeter/jaco-gym.git).
 
 ```bash
 git clone https://github.com/PierreExeter/jaco-gym.git
-cd jaco-gym/Real/jaco-real-gym/    # Environment for the physical arm
+
+# Environment for the physical arm
+cd jaco-gym/Real/jaco-real-gym/  
 pip3 install -e .
-cd ../../publish_in_topics/jaco-gazebo-gym/  # Environment for the arm in Gazebo
+
+# Environment for the arm in Gazebo
+cd ../../publish_in_topics/jaco-gazebo-gym/  
 pip3 install -e .
 ```
 
 ## Test your environment
 
-For the physical arm (only tested on ROS Kinetic):
+### For the physical arm (only tested on ROS Kinetic)
 
 In terminal 1:
 ```bash
@@ -52,7 +55,7 @@ In terminal 2:
 python3 Real/test_jaco_real.py
 ```
 
-For the arm in Gazebo (tested with ROS Melodic and Kinetic):
+### For the arm in Gazebo (tested with ROS Melodic and Kinetic)
 
 In terminal 1:
 ```bash
