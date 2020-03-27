@@ -4,7 +4,7 @@ The environment is implemented both for the real arm and the Gazebo simulator.
 
 
 ![alt text][logo]
-[logo]: images/jaco_gazeboi.jpg
+[logo]: images/jaco_gazebo.jpg
 
 
 ## Installation
