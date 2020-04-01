@@ -1,0 +1,42 @@
+import gym
+import jaco_gazebo_gym
+import random
+import rospy
+import numpy as np 
+
+
+env = gym.make('JacoGazebo-v0')
+
+
+obs = env.reset()
+print("observation: ", obs)
+
+action = [0, 90, 180, 60, 0, 0]
+obs, reward, done, info = env.step(action)
+
+action = [0, 90, 90, 60, 0, 0]
+obs, reward, done, info = env.step(action)
+
+print("observation: ", obs)
+print("reward: ", reward)
+print("done: ", done)
+print("info: ", info)
+
+
+# for t in range(3):
+
+#     # create action
+#     ang0 = 0
+#     ang1 = 180
+#     ang2 = random.randrange(90, 270)
+#     ang3 = random.randrange(0, 359)
+#     ang4 = random.randrange(0, 359)
+#     ang5 = random.randrange(0, 359)
+#     action = [ang0, ang1, ang2, ang3, ang4, ang5]
+#     print("action sent: ", action)
+
+#     state = env.step(action)
+#     print("current state: ", state)
+
+
+#     print("time step {}".format(t))

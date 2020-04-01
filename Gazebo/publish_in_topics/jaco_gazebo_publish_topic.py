@@ -2,7 +2,6 @@
 """Publishes joint trajectory to move robot to given pose"""
 
 import rospy
-import time
 from trajectory_msgs.msg import JointTrajectory
 from trajectory_msgs.msg import JointTrajectoryPoint
 from std_srvs.srv import Empty
@@ -20,9 +19,6 @@ class JacoGazeboPublishTopic:
 
 
     def moveJoint(self, jointcmds):
-        
-        #allow gazebo to launch
-        # time.sleep(5)
 
         # Unpause the physics
         rospy.wait_for_service('/gazebo/unpause_physics')
@@ -51,26 +47,9 @@ class JacoGazeboPublishTopic:
         while (count < 50):
             self.pub.publish(jointCmd)
             count = count + 1
-            rate.sleep()     
-
-
-    # def callback(self, msg):       # Define a function called 'callback' that receives a parameter named 'msg'                                 
-    #     print("\n position: ", msg.position)       # Print the value 'position' inside the 'msg' parameter
-    #     print("\n velocity: ", msg.velocity)
-    #     print("\n effort: ", msg.effort)
-
-    #     rospy.loginfo("\n" + rospy.get_caller_id() + " position rospy: %s", msg.position)
-    #     rospy.loginfo("\n" + rospy.get_caller_id() + " velocity rospy: %s", msg.velocity)
-    #     rospy.loginfo("\n" + rospy.get_caller_id() + " effort rospy: %s", msg.effort)
-        
+            rate.sleep()           
     
     def read_state(self):
-
-        # rospy.init_node('topic_subscriber')
-        # self.sub_topic = '/j2n6s300/joint_states'
-        # self.sub = rospy.Subscriber(self.sub_topic, JointState, self.callback)
-        # print(self.sub)
-        # rospy.spin()  
 
         self.sub_topic = '/j2n6s300/joint_states'
         self.status = rospy.wait_for_message(self.sub_topic, JointState)
@@ -82,13 +61,9 @@ class JacoGazeboPublishTopic:
         return self.position, self.velocity, self.effort
 
 
-
 if __name__ == '__main__':
 
     rospy.init_node('jaco_gazebo_publish_topic_node')	
-    
     robot = JacoGazeboPublishTopic()
-
     robot.moveJoint([0.0, 2.9, 1.3, 4.2, 1.4, 0.0])
-
     print(robot.read_state())

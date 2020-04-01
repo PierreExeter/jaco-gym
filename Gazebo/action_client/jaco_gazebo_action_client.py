@@ -1,74 +1,136 @@
 #! /usr/bin/env python
 
-import rospy
 import actionlib
-from kinova_msgs.msg import ArmJointAnglesGoal, ArmJointAnglesAction
-from geometry_msgs.msg import PoseStamped
-from trajectory_msgs.msg import JointTrajectory
+import rospy
+
+from control_msgs.msg import FollowJointTrajectoryAction, FollowJointTrajectoryGoal, JointTrajectoryControllerState
+from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
+from gazebo_msgs.msg import LinkStates
+from std_srvs.srv import Empty
+from sensor_msgs.msg import JointState
 
 
 class JacoGazeboActionClient:
 
-  def __init__(self):
-
-    # with Gazebo
-    self.topic_name = '/j2n6s300/effort_joint_trajectory_controller/command'
-    # self.client = actionlib.SimpleActionClient(self.topic_name, JointTrajectory)
-    self.client = actionlib.SimpleActionClient(self.topic_name, ArmJointAnglesAction)
-    
-    # with the real arm
-    # self.topic_name = '/j2n6s300_driver/joints_action/joint_angles'
-    # self.client = actionlib.SimpleActionClient(self.topic_name, ArmJointAnglesAction)
-
-  def move_arm(self, angle1, angle2, angle3, angle4, angle5, angle6):
-    print("4")
-    self.client.wait_for_server()
-    print("5")
-    goal = ArmJointAnglesGoal()
-    goal.angles.joint1 = angle1
-    goal.angles.joint2 = angle2
-    goal.angles.joint3 = angle3
-    goal.angles.joint4 = angle4
-    goal.angles.joint5 = angle5
-    goal.angles.joint6 = angle6
-    self.client.send_goal(goal)
-    self.client.wait_for_result()
-    
-
-  def cancel_move(self):
-    self.client.cancel_all_goals()
-
-  def read_angles(self):
-
-    self.client.wait_for_server()
-    self.client.wait_for_result()
-    joint_angles = self.client.get_result()
-    angles_list = [
-      joint_angles.angles.joint1, 
-      joint_angles.angles.joint2, 
-      joint_angles.angles.joint3, 
-      joint_angles.angles.joint4, 
-      joint_angles.angles.joint5, 
-      joint_angles.angles.joint6, 
-    ]
-    return angles_list
-
-  def read_tip_position(self):
-    pos = rospy.wait_for_message('/j2n6s300_driver/out/tool_pose', PoseStamped)
-    pos_list = [pos.pose.position.x, pos.pose.position.y, pos.pose.position.z]
-    return pos_list
+    def __init__(self):
+        rospy.init_node("kinova_client")
+        action_address = "/j2n6s300/effort_joint_trajectory_controller/follow_joint_trajectory"
+        self.client = actionlib.SimpleActionClient(action_address, FollowJointTrajectoryAction)
 
 
+    def move_arm(self, points_list):
+        # Unpause the physics
+        rospy.wait_for_service('/gazebo/unpause_physics')
+        unpause_gazebo = rospy.ServiceProxy('/gazebo/unpause_physics', Empty)
+        unpause_gazebo()
 
-if __name__ == '__main__':
+        self.client.wait_for_server()
 
-  rospy.init_node('jaco_gazebo_action_client_node')
+        goal = FollowJointTrajectoryGoal()    
 
-  print("1")
-  robot_client = JacoGazeboActionClient()
+        # We need to fill the goal message with its components
+        #         
+        # check msg structure with: rosmsg info FollowJointTrajectoryGoal
+        # It is composed of 4 sub-messages:
+        # "trajectory" of type trajectory_msgs/JointTrajectory 
+        # "path_tolerance" of type control_msgs/JointTolerance
+        # "goal_tolerance" of type control_msgs/JointTolerance
+        # "goal_time_tolerance" of type duration
 
-  print("2")
-  robot_client.cancel_move()
-  
-  print("3")
-  robot_client.move_arm(0, 180, 180, 0, 0, 0)
+        trajectory_msg = JointTrajectory()
+        # check msg structure with: rosmsg info JointTrajectory
+        # It is composed of 3 sub-messages:
+        # "header" of type std_msgs/Header 
+        # "joint_names" of type string
+        # "points" of type trajectory_msgs/JointTrajectoryPoint
+
+        trajectory_msg.joint_names = [
+            "j2n6s300_joint_1", 
+            "j2n6s300_joint_2", 
+            "j2n6s300_joint_3", 
+            "j2n6s300_joint_4", 
+            "j2n6s300_joint_5", 
+            "j2n6s300_joint_6"
+            ]
+
+        points_msg = JointTrajectoryPoint()
+        # check msg structure with: rosmsg info JointTrajectoryPoint
+        # It is composed of 5 sub-messages:
+        # "positions" of type float64
+        # "velocities" of type float64
+        # "accelerations" of type float64
+        # "efforts" of type float64
+        # "time_from_start" of type duration
+        
+        points_msg.positions = points_list
+        points_msg.velocities = [0, 0, 0, 0, 0, 0]
+        points_msg.accelerations = [0, 0, 0, 0, 0, 0]
+        points_msg.effort = [0, 0, 0, 0, 0, 0]
+        points_msg.time_from_start = rospy.Duration(0.01)
+
+        # fill in points message of the trajectory message
+        trajectory_msg.points = [points_msg]
+
+        # fill in trajectory message of the goal
+        goal.trajectory = trajectory_msg
+
+        self.client.send_goal_and_wait(goal)
+
+        return self.client.get_state()
+
+
+    def cancel_move(self):
+        self.client.cancel_all_goals()
+
+    def read_state_old(self):
+        self.status = rospy.wait_for_message("/j2n6s300/effort_joint_trajectory_controller/state", JointTrajectoryControllerState)
+        
+        # convert tuple to list and concatenate
+        self.state = list(self.status.actual.positions) + list(self.status.actual.velocities)
+        # also self.status.actual.accelerations, self.status.actual.effort
+
+        return self.state
+
+    def read_state(self):
+        self.status = rospy.wait_for_message("/j2n6s300/joint_states", JointState)
+        
+        self.joint_names = self.status.name
+        # print(self.joint_names)
+
+        self.pos = self.status.position
+        self.vel = self.status.velocity
+        self.eff = self.status.effort
+
+        # return self.status
+        return self.pos + self.vel + self.eff
+
+
+    def get_tip_coord(self):
+        self.status = rospy.wait_for_message("/gazebo/link_states", LinkStates)
+        # see also topic /tf
+
+        self.joint_names = self.status.name
+        self.pos = self.status.pose
+
+        # print(self.status.pose[7].position.x)
+
+        # for i in range(14):
+        #     print(i)
+        #     print("joint:")
+        #     print(self.joint_names[i])
+        #     print("pose:")
+        #     print(self.status.pose[i])
+
+        return [self.status.pose[7].position.x, self.status.pose[7].position.y, self.status.pose[7].position.z]
+        
+
+
+
+# client = JacoGazeboActionClient()
+# client.cancel_move()
+# client.move_arm([0, 1.57, 3.14, 0, 0, 0])
+
+# # print(client.read_state())
+# # print(client.read_state2())
+# print(client.get_tip_coord())   # PB: reading coordinate doesn't wait until the arm has finished moving
+
