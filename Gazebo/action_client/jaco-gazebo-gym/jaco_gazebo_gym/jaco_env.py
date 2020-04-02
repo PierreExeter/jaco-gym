@@ -56,12 +56,20 @@ class JacoEnv(gym.Env):
         self.observation = self.robot.read_state()
 
         # generate random coordinates of a point in space
-        x_target = random.uniform(-0.49, 0.49)
-        y_target = random.uniform(-0.49, 0.49)
-        z_target = random.uniform(0.69, 1.18)
+        # limits of real robot
+        # x_target = random.uniform(-0.49, 0.49)
+        # y_target = random.uniform(-0.49, 0.49)
+        # z_target = random.uniform(0.69, 1.18)
+
+        # limits in Gazebo
+        x_target = random.uniform(-0.335, 0.335)
+        y_target = random.uniform(-0.337, 0.337)
+        z_target = random.uniform(0.686, 1.021)
         
         self.target_vect = np.array([x_target, y_target, z_target])
         print("Random target coordinates generated")
+
+        self.robot.move_sphere(self.target_vect)
 
         return self.observation
 
