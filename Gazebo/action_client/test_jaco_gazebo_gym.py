@@ -38,7 +38,7 @@ for episode in range(3):
     obs = env.reset()
     rewards = []
 
-    for t in range(15):
+    for t in range(5):
 
         action = env.action_space.sample()
         obs, reward, done, info = env.step(action)

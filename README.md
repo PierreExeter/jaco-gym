@@ -3,7 +3,7 @@ An OpenAI Gym environment for the Jaco2 robotic arm by Kinova.
 The environment is implemented both for the real arm and the Gazebo simulator.
 
 
-![Jaco Gazebo](/images/jaco_gazebo.jpg)
+![Jaco Gazebo](/images/jaco_training.gif)
 
 ## Installation
 
