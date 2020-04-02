@@ -2,6 +2,7 @@
 
 import actionlib
 import rospy
+import numpy as np
 
 from control_msgs.msg import FollowJointTrajectoryAction, FollowJointTrajectoryGoal, JointTrajectoryControllerState
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
@@ -155,7 +156,7 @@ class JacoGazeboActionClient:
         self.eff = self.status.effort
 
         # return self.status
-        return self.pos + self.vel + self.eff
+        return np.asarray(self.pos + self.vel + self.eff)
 
 
     def get_tip_coord(self):

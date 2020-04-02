@@ -4,14 +4,32 @@ import random
 import rospy
 import numpy as np 
 
+from stable_baselines.common.env_checker import check_env
+
 
 env = gym.make('JacoGazebo-v0')
 
+# It will check your custom environment and output additional warnings if needed
+print("starting check")
+check_env(env, warn=True)
+print("check done")
+
+
+print('Action space:')
+print(env.action_space)
+print(env.action_space.high)
+print(env.action_space.low)
+
+print('State space:')
+print(env.observation_space)
+print(env.observation_space.high)
+print(env.observation_space.low)
+
+
 
 # obs = env.reset()
-# print("observation: ", obs)
-
-# action = [0, 180, 180, 0, 0, 0]
+# action = env.action_space.sample()
+# print('random action:', action)
 # obs, reward, done, info = env.step(action)
 
 
@@ -20,18 +38,9 @@ for episode in range(3):
     obs = env.reset()
     rewards = []
 
-    for t in range(10):
+    for t in range(15):
 
-        # create action
-        ang0 = random.randrange(0, 360)
-        ang1 = 180    # random.randrange(90, 180)
-        ang2 = random.randrange(90, 270)
-        ang3 = random.randrange(0, 360)
-        ang4 = random.randrange(0, 360)
-        ang5 = random.randrange(0, 360)
-
-        action = [ang0, ang1, ang2, ang3, ang4, ang5]
-
+        action = env.action_space.sample()
         obs, reward, done, info = env.step(action)
 
         print("timestep:", t)
@@ -41,7 +50,9 @@ for episode in range(3):
         print("done: ", done)
         print("info: ", info)
 
-        rewards.append(reward)
+        if done:
+            rewards.append(reward)
+            break
 
     print("Episode: {}, Cumulated reward: {}".format(episode, sum(rewards)))
     print("******************")
