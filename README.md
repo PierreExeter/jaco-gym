@@ -139,7 +139,7 @@ python3 scripts/2_enjoy_ppo2.py
 Type: Box(36)
 
 | Num           | Observation                        | Min   | Max  |
-| ------------- |:----------------------------------:| -----:|-----:|
+| ------------- | ---------------------------------- | ----- | ---- |
 | 0             | joint_1 angle (rad)                | -inf  | inf  |
 | 1             | joint_2 angle (rad)                | -inf  | inf  |
 | 2             | joint_3 angle (rad)                | -inf  | inf  |
@@ -183,7 +183,7 @@ Type: Box(36)
 Type: Box(6)
 
 | Num           | Action                        | Min   | Max  |
-| ------------- |:-----------------------------:| -----:|-----:|
+| ------------- | ----------------------------- | ----- | ---- |
 | 0             | joint_1 angle (scaled)        | -1    | 1    |
 | 1             | joint_2 angle (scaled)        | -1    | 1    |
 | 2             | joint_3 angle (scaled)        | -1    | 1    |
