@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<robot name="sphere_simple">
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <sphere radius="1.0"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>
