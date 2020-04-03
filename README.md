@@ -17,7 +17,23 @@ ROS Kinetic on Ubuntu 16.04
 2. Install and configure your [Catkin workspace](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment).
 
 
-3. Install [Kinova-ros](https://github.com/Kinovarobotics/kinova-ros) and build.
+
+3. Install dependencies for the Kinova-ros package, as indicated [here](https://github.com/Kinovarobotics/kinova-ros/wiki/Gazebo).
+
+```bash
+sudo apt-get install ros-<distro>-gazebo-ros-control
+sudo apt-get install ros-<distro>-ros-controllers*
+sudo apt-get install ros-<distro>-trac-ik-kinematics-plugin
+sudo apt-get install ros-<distro>-effort-controllers 
+sudo apt-get install ros-<distro>-joint-state-controller 
+sudo apt-get install ros-<distro>-joint-trajectory-controller 
+sudo apt-get install ros-<distro>-controller-*
+```
+
+(replace `<distro>` by your ROS distribution, for example `kinetic` or `melodic`)
+
+
+4. Install [Kinova-ros](https://github.com/Kinovarobotics/kinova-ros) and build.
 ```bash
 cd ~/catkin_ws/src
 git clone https://github.com/Kinovarobotics/kinova-ros.git
@@ -25,23 +41,23 @@ cd ..
 catkin_make
 ```
 
-4. Install [Gym](https://github.com/openai/gym).
+5. Install [Gym](https://github.com/openai/gym).
 
 ```bash
 pip3 install gym
 ```
 
-5. Install [jaco-gym](https://github.com/PierreExeter/jaco-gym.git).
+6. Install [jaco-gym](https://github.com/PierreExeter/jaco-gym.git).
 
 ```bash
 git clone https://github.com/PierreExeter/jaco-gym.git
 
 # Environment for the physical arm
-cd jaco-gym/Real/jaco-real-gym/  
+cd jaco-gym/Real/jaco-real-gym/ 
 pip3 install -e .
 
 # Environment for the arm in Gazebo
-cd ../../publish_in_topics/jaco-gazebo-gym/  
+cd ../../publish_in_topics/jaco-gazebo-gym/
 pip3 install -e .
 ```
 
@@ -65,28 +81,6 @@ In terminal 1:
 ```bash
 roslaunch kinova_gazebo robot_launch.launch kinova_robotType:=j2n6s300
 ```
-
-
-Note, if you get an error here, you may need to install the following, as indicated [here](https://github.com/Kinovarobotics/kinova-ros/wiki/Gazebo).
-
-
-```bash
-sudo apt-get install ros-<distro>-gazebo-ros-control
-sudo apt-get install ros-<distro>-ros-controllers*
-sudo apt-get install ros-<distro>-trac-ik-kinematics-plugin
-sudo apt-get install ros-<distro>-effort-controllers 
-sudo apt-get install ros-<distro>-joint-state-controller 
-sudo apt-get install ros-<distro>-joint-trajectory-controller 
-sudo apt-get install ros-<distro>-controller-*
-```
-
-(replace `<distro>` by your ROS distribution, for example `kinetic` or `melodic`)
-
-
-```bash
-roslaunch kinova_gazebo robot_launch.launch kinova_robotType:=j2n6s300
-```
-
 
 In terminal 2:
 ```bash

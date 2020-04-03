@@ -1,0 +1,56 @@
+import gym
+import jaco_gym
+import random
+import numpy as np 
+
+from stable_baselines.common.env_checker import check_env
+
+env = gym.make('JacoGazebo-v1')
+
+# It will check your custom environment and output additional warnings if needed
+print("starting check")
+check_env(env, warn=True)
+print("check done")
+
+
+print('Action space:')
+print(env.action_space)
+print(env.action_space.high)
+print(env.action_space.low)
+
+print('State space:')
+print(env.observation_space)
+print(env.observation_space.high)
+print(env.observation_space.low)
+
+
+
+# obs = env.reset()
+# action = env.action_space.sample()
+# print('random action:', action)
+# obs, reward, done, info = env.step(action)
+
+
+for episode in range(3):
+
+    obs = env.reset()
+    rewards = []
+
+    for t in range(5):
+
+        action = env.action_space.sample()
+        obs, reward, done, info = env.step(action)
+
+        print("timestep:", t)
+        print("action: ", action)
+        print("observation: ", obs)
+        print("reward: ", reward)
+        print("done: ", done)
+        print("info: ", info)
+
+        if done:
+            rewards.append(reward)
+            break
+
+    print("Episode: {}, Cumulated reward: {}".format(episode, sum(rewards)))
+    print("******************")
