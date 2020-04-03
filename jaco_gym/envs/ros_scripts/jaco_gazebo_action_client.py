@@ -191,5 +191,6 @@ class JacoGazeboActionClient:
 
 # # print(client.read_state())
 # # print(client.read_state2())
-# print(client.get_tip_coord())   # PB: reading coordinate doesn't wait until the arm has finished moving
+# print(client.get_tip_coord())   # PB: reading coordinate doesn't wait until the arm has finished moving. SOLUTION: wait for 2s. To improve.
 
+# client.read_state()

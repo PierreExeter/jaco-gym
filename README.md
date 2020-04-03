@@ -1,23 +1,24 @@
 # Jaco Gym Environment
 An OpenAI Gym environment for the Jaco2 robotic arm by Kinova.
-The environment is implemented both for the real arm and the Gazebo simulator.
+The environment is implemented both for the real arm and the Gazebo simulator. 
+The goal is to bring the arm's end effector as close as possible to the target green ball.
+The target position is initialised randomly at the beginning of each episode.
 
 
 ![Jaco Gazebo](/images/jaco_training.gif)
+
+
+
 
 ## Installation
 
 1. Install [ROS](http://wiki.ros.org/ROS/Installation).
 
-ROS Melodic on Ubuntu 18.04
-
-or 
-
-ROS Kinetic on Ubuntu 16.04
+* ROS Melodic on Ubuntu 18.04
+* ROS Kinetic on Ubuntu 16.04
 
 
 2. Install and configure your [Catkin workspace](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment).
-
 
 
 3. Install dependencies for the Kinova-ros package, as indicated [here](https://github.com/Kinovarobotics/kinova-ros/wiki/Gazebo).
@@ -61,20 +62,20 @@ pip3 install -e .
 
 ### (OPTIONAL: install the RL library Stable-Baselines)
 
-8. Install [Stable-baselines](https://github.com/pirobot/stable-baselines).
+7. Install [Stable-baselines](https://github.com/pirobot/stable-baselines).
 
 ```bash
 sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
 pip3 install stable-baselines[mpi]
 ```
 
-9. Install the dependencies for [RL Baselines Zoo](https://github.com/araffin/rl-baselines-zoo).
+8. Install the dependencies for [RL Baselines Zoo](https://github.com/araffin/rl-baselines-zoo).
 ```bash
 sudo apt-get install swig ffmpeg
 pip3 install box2d box2d-kengz pyyaml optuna pytablewriter
 ```
 
-10. Install [Tensorflow 1.14](https://www.tensorflow.org/). Stable-baselines does not yet support Tensorflow 2.
+9. Install [Tensorflow 1.14](https://www.tensorflow.org/). Stable-baselines does not yet support Tensorflow 2.
 
 ```bash
 pip3 install tensorflow-gpu==1.14
@@ -130,6 +131,81 @@ In terminal 2:
 ```bash
 python3 scripts/2_enjoy_ppo2.py
 ```
+
+
+## Environment details
+
+### Observation
+Type: Box(36)
+
+| Num           | Observation                        | Min   | Max  |
+| ------------- |:----------------------------------:| -----:|-----:|
+| 0             | joint_1 angle (rad)                | -inf  | inf  |
+| 1             | joint_2 angle (rad)                | -inf  | inf  |
+| 2             | joint_3 angle (rad)                | -inf  | inf  |
+| 3             | joint_4 angle (rad)                | -inf  | inf  |
+| 4             | joint_5 angle (rad)                | -inf  | inf  |
+| 5             | joint_6 angle (rad)                | -inf  | inf  |
+| 6             | joint_finger_1 angle (rad)         | -inf  | inf  |
+| 7             | joint_finger_2 angle (rad)         | -inf  | inf  |
+| 8             | joint_finger_3 angle (rad)         | -inf  | inf  |
+| 9             | joint_finger_tip_1 angle (rad)     | -inf  | inf  |
+| 10            | joint_finger_tip_2 angle (rad)     | -inf  | inf  |
+| 11            | joint_finger_tip_3 angle (rad)     | -inf  | inf  |
+| 12            | joint_1 velocity (rad/s)           | -inf  | inf  |
+| 13            | joint_2 velocity (rad/s)           | -inf  | inf  |
+| 14            | joint_3 velocity (rad/s)           | -inf  | inf  |
+| 15            | joint_4 velocity (rad/s)           | -inf  | inf  |
+| 16            | joint_5 velocity (rad/s)           | -inf  | inf  |
+| 17            | joint_6 velocity (rad/s)           | -inf  | inf  |
+| 18            | joint_finger_1 velocity (rad/s)    | -inf  | inf  |
+| 19            | joint_finger_2 velocity (rad/s)    | -inf  | inf  |
+| 20            | joint_finger_3 velocity (rad/s)    | -inf  | inf  |
+| 21            | joint_finger_tip_1 velocity (rad/s)| -inf  | inf  |
+| 22            | joint_finger_tip_2 velocity (rad/s)| -inf  | inf  |
+| 23            | joint_finger_tip_3 velocity (rad/s)| -inf  | inf  |
+| 24            | joint_1 effort (N.m)               | -inf  | inf  |
+| 25            | joint_2 effort (N.m)               | -inf  | inf  |
+| 26            | joint_3 effort (N.m)               | -inf  | inf  |
+| 27            | joint_4 effort (N.m)               | -inf  | inf  |
+| 28            | joint_5 effort (N.m)               | -inf  | inf  |
+| 29            | joint_6 effort (N.m)               | -inf  | inf  |
+| 30            | joint_finger_1 effort (N.m)        | -inf  | inf  |
+| 31            | joint_finger_2 effort (N.m)        | -inf  | inf  |
+| 32            | joint_finger_3 effort (N.m)        | -inf  | inf  |
+| 33            | joint_finger_tip_1 effort (N.m)    | -inf  | inf  |
+| 34            | joint_finger_tip_2 effort (N.m)    | -inf  | inf  |
+| 35            | joint_finger_tip_3 effort (N.m)    | -inf  | inf  |
+
+
+
+### Actions
+Type: Box(6)
+
+| Num           | Action                        | Min   | Max  |
+| ------------- |:-----------------------------:| -----:|-----:|
+| 0             | joint_1 angle (scaled)        | -1    | 1    |
+| 1             | joint_2 angle (scaled)        | -1    | 1    |
+| 2             | joint_3 angle (scaled)        | -1    | 1    |
+| 3             | joint_4 angle (scaled)        | -1    | 1    |
+| 4             | joint_5 angle (scaled)        | -1    | 1    |
+| 5             | joint_6 angle (scaled)        | -1    | 1    |
+
+
+
+### Reward
+The reward is incremented at each time step by the negative of the distance between the target object position and the end deflector position (joint_6).
+
+
+### Starting State
+The arm is initialised with its joint angles as follows (in degrees): [0, 180, 180, 0, 0, 0].
+The target object is initialised to a random location within the arm's reach.
+
+
+### Episode Termination
+An episode terminates if more than 50 time steps are completed.
+
+
 
 
 ## Supported systems

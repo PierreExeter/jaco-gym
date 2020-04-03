@@ -7,10 +7,10 @@ from stable_baselines.common.env_checker import check_env
 
 env = gym.make('JacoGazebo-v1')
 
-# It will check your custom environment and output additional warnings if needed
-print("starting check")
-check_env(env, warn=True)
-print("check done")
+## It will check your custom environment and output additional warnings if needed
+# print("starting check")
+# check_env(env, warn=True)
+# print("check done")
 
 
 print('Action space:')
