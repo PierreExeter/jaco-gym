@@ -36,7 +36,21 @@ sudo apt-get install ros-<distro>-controller-*
 (replace `<distro>` by your ROS distribution, for example `kinetic` or `melodic`)
 
 
-4. Install the ROS packages and build.
+4. Install [Gym](https://github.com/openai/gym).
+
+```bash
+pip3 install gym
+```
+
+5. Install [jaco-gym](https://github.com/PierreExeter/jaco-gym.git).
+
+```bash
+git clone https://github.com/PierreExeter/jaco-gym.git
+cd jaco-gym
+pip3 install -e .
+```
+
+6. Install the ROS packages and build.
 
 ```bash
 cp -r ROS_packages/sphere_description ~/catkin_ws/src
@@ -47,18 +61,6 @@ catkin_make
 Note, the kinova-ros package was adapted from the [official package](https://github.com/Kinovarobotics/kinova-ros).
 
 
-5. Install [Gym](https://github.com/openai/gym).
-
-```bash
-pip3 install gym
-```
-
-6. Install [jaco-gym](https://github.com/PierreExeter/jaco-gym.git).
-
-```bash
-git clone https://github.com/PierreExeter/jaco-gym.git
-pip3 install -e .
-```
 
 ### (OPTIONAL: install the RL library Stable-Baselines)
 
@@ -221,6 +223,6 @@ info = {'tip coordinates': [x, y, z], 'target coordinates': array([x, y, z])}
 ## Supported systems
 Tested on:
 - Ubuntu 18.04 and 16.04 
-- Python 3.6
+- Python 3.6.9
 - Gym 0.15.4
 
