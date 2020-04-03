@@ -2,7 +2,7 @@
 An OpenAI Gym environment for the Jaco2 robotic arm by Kinova.
 The environment is implemented both for the real arm and the Gazebo simulator. 
 The goal is to bring the arm's end effector as close as possible to the target green ball.
-The target position is initialised randomly at the beginning of each episode.
+The target object position is initialised randomly at the beginning of each episode.
 
 
 ![Jaco Gazebo](/images/jaco_training.gif)
@@ -206,6 +206,11 @@ The target object is initialised to a random location within the arm's reach.
 An episode terminates if more than 50 time steps are completed.
 
 
+### Step info
+The info dictionary returned by the env.step function is composed as follows:
+```bash
+info = {'tip coordinates': [x, y, z], 'target coordinates': array([x, y, z])}
+```
 
 
 ## Supported systems
