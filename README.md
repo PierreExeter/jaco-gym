@@ -132,6 +132,11 @@ In terminal 2:
 python3 scripts/2_enjoy_ppo2.py
 ```
 
+## Plot learning curves
+
+```bash
+python3 scripts/3_plot_results.py
+```
 
 ## Environment details
 
@@ -191,7 +196,7 @@ Type: Box(6)
 | 4             | joint_5 angle (scaled)        | -1    | 1    |
 | 5             | joint_6 angle (scaled)        | -1    | 1    |
 
-
+Note, at the moment joint_2 angle is restricted to 180 deg and joint_3 angle is restricted to the interval [90, 270] deg in order to reduce the arm's amplitude of motion.
 
 ### Reward
 The reward is incremented at each time step by the negative of the distance between the target object position and the end deflector position (joint_6).
@@ -207,7 +212,7 @@ An episode terminates if more than 50 time steps are completed.
 
 
 ### Step info
-The info dictionary returned by the env.step function is composed as follows:
+The info dictionary returned by the env.step function is structured as follows:
 ```bash
 info = {'tip coordinates': [x, y, z], 'target coordinates': array([x, y, z])}
 ```

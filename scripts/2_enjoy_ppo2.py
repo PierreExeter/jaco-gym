@@ -2,17 +2,21 @@ import gym
 import jaco_gym
 
 from stable_baselines.common.policies import MlpPolicy
+from stable_baselines.common.vec_env import DummyVecEnv
 from stable_baselines import PPO2
 
 
-# first launch Jaco in Gazebo
+# first launch Jaco in Gazebo with 
 # roslaunch kinova_gazebo robot_launch.launch kinova_robotType:=j2n6s300
 
 env_id = 'JacoGazebo-v1'
-env = gym.make(env_id)
-env.reset()
+log_dir = "../results/"+env_id
 
-model = PPO2.load("../results/trained_agents/"+env_id)
+env = gym.make(env_id)
+env = DummyVecEnv([lambda: env])
+# env.reset()
+
+model = PPO2.load(log_dir)
 
 # Enjoy trained agent
 obs = env.reset()
