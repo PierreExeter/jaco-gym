@@ -15,8 +15,7 @@ from geometry_msgs.msg import Pose, Point
 class JacoGazeboActionClient:
 
     def __init__(self):
-        # removed because it opens a node a each action?
-        # rospy.init_node("kinova_client")
+        rospy.init_node("kinova_client")
         
         action_address = "/j2n6s300/effort_joint_trajectory_controller/follow_joint_trajectory"
         self.client = actionlib.SimpleActionClient(action_address, FollowJointTrajectoryAction)
@@ -74,10 +73,10 @@ class JacoGazeboActionClient:
         # "efforts" of type float64
         # "time_from_start" of type duration
         
-        points_msg.positions = points_list
+        points_msg.positions = [0, 0, 0, 0, 0, 0]
         points_msg.velocities = [0, 0, 0, 0, 0, 0]
         points_msg.accelerations = [0, 0, 0, 0, 0, 0]
-        points_msg.effort = [0, 0, 0, 0, 0, 0]
+        points_msg.effort = [0, 1, 0, 0, 0, 0]
         points_msg.time_from_start = rospy.Duration(0.01)
 
         # fill in points message of the trajectory message
@@ -85,6 +84,8 @@ class JacoGazeboActionClient:
 
         # fill in trajectory message of the goal
         goal.trajectory = trajectory_msg
+
+        print(trajectory_msg)
 
         # self.client.send_goal_and_wait(goal)
         self.client.send_goal(goal)
@@ -184,9 +185,9 @@ class JacoGazeboActionClient:
 
 
 
-# client = JacoGazeboActionClient()
-# client.cancel_move()
-# client.move_arm([3, 1.57, 3.14, 0, 0, 0])
+client = JacoGazeboActionClient()
+client.cancel_move()
+client.move_arm([3, 1.57, 3.14, 0, 0, 0])
 
 # client.move_sphere([1, 1, 1])
 

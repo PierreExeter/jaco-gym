@@ -17,6 +17,12 @@ The target object position is initialised randomly at the beginning of each epis
 * ROS Melodic on Ubuntu 18.04
 * ROS Kinetic on Ubuntu 16.04
 
+To use ROS with Python 3, run:
+
+```bash
+sudo apt-get install python3-pip
+sudo pip3 install rospkg catkin_pkg
+```
 
 2. Install and configure your [Catkin workspace](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment).
 

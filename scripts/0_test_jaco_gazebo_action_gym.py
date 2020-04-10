@@ -54,3 +54,5 @@ for episode in range(3):
 
     print("Episode: {}, Cumulated reward: {}".format(episode, sum(rewards)))
     print("******************")
+
+env.close()
