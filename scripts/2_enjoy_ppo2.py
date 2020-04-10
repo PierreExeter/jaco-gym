@@ -1,5 +1,6 @@
 import gym
 import jaco_gym
+import rospy
 
 from stable_baselines.common.policies import MlpPolicy
 from stable_baselines.common.vec_env import DummyVecEnv
@@ -26,3 +27,5 @@ while True:
     action, _states = model.predict(obs)
     obs, rewards, dones, info = env.step(action)
 
+
+env.close()
