@@ -99,6 +99,22 @@ In terminal 1:
 roslaunch kinova_bringup kinova_robot.launch kinova_robotType:=j2n6s300
 ```
 
+Note, by default graphics rendering in Gazebo is disabled. To enable it, edit the launch file
+
+```
+~/catkin_ws/src/kinova-ros/kinova_gazebo/launch/robot_launch.launch
+```
+and replace 
+```
+  <arg name="gui" default="false"/>
+```
+
+by 
+```
+  <arg name="gui" default="true"/>
+```
+
+
 In terminal 2:
 ```bash
 python3 scripts/0_test_jaco_real.py
@@ -221,10 +237,48 @@ An episode terminates if more than 50 time steps are completed.
 
 ### Step info
 The info dictionary returned by the env.step function is structured as follows:
-```bash
+```python
 info = {'tip coordinates': [x, y, z], 'target coordinates': array([x, y, z])}
 ```
 
+## Python profiling
+You can profile the time individual lines of code take to execute to monitor the code performance using [line_profiler](https://github.com/rkern/line_profiler).
+
+### Install line-profiler
+
+```bash
+pip install line-profiler
+```
+
+### Decorate the functions you want to profile with @profile
+
+For example:
+
+```bash
+vim scripts/0_test_jaco_gazebo_action_gym.py
+```
+
+```python
+@profile
+def main():
+
+    for episode in range(3):
+
+        obs = env.reset()
+        ...
+```
+
+### Execute code and profile
+
+```bash
+kernprof -l 0_test_jaco_gazebo_action_gym.py
+```
+
+### read profiling results line by line
+
+```bash
+python -m line_profiler 0_test_jaco_gazebo_action_gym.py.lprof
+```
 
 ## Supported systems
 Tested on:
