@@ -67,10 +67,7 @@ catkin_make
 Note, the kinova-ros package was adapted from the [official package](https://github.com/Kinovarobotics/kinova-ros).
 
 
-
-### (OPTIONAL: install the RL library Stable-Baselines)
-
-7. Install [Stable-baselines](https://github.com/pirobot/stable-baselines).
+7. Install the RL library [Stable-baselines](https://github.com/pirobot/stable-baselines).
 
 ```bash
 sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
@@ -99,22 +96,6 @@ In terminal 1:
 roslaunch kinova_bringup kinova_robot.launch kinova_robotType:=j2n6s300
 ```
 
-Note, by default graphics rendering in Gazebo is disabled. To enable it, edit the launch file
-
-```
-~/catkin_ws/src/kinova-ros/kinova_gazebo/launch/robot_launch.launch
-```
-and replace 
-```
-  <arg name="gui" default="false"/>
-```
-
-by 
-```
-  <arg name="gui" default="true"/>
-```
-
-
 In terminal 2:
 ```bash
 python3 scripts/0_test_jaco_real.py
@@ -131,6 +112,24 @@ In terminal 2:
 ```bash
 python3 scripts/0_test_jaco_gazebo_action_gym.py
 ```
+
+# Activate graphic rendering in Gazebo
+By default graphics rendering in Gazebo is disabled. To enable it, edit the launch file
+
+```
+~/catkin_ws/src/kinova-ros/kinova_gazebo/launch/robot_launch.launch
+```
+and replace 
+```
+  <arg name="gui" default="false"/>
+```
+
+by 
+```
+  <arg name="gui" default="true"/>
+```
+
+
 
 ## Train the agent
 
@@ -274,7 +273,7 @@ def main():
 kernprof -l 0_test_jaco_gazebo_action_gym.py
 ```
 
-### read profiling results line by line
+### Read profiling results line by line
 
 ```bash
 python -m line_profiler 0_test_jaco_gazebo_action_gym.py.lprof
