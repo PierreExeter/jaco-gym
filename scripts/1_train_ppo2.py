@@ -2,6 +2,8 @@ import gym
 import jaco_gym
 import os
 import rospy
+import cProfile
+
 
 from stable_baselines.common.policies import MlpPolicy
 from stable_baselines.bench import Monitor
@@ -11,6 +13,9 @@ from stable_baselines import PPO2
 
 # first launch Jaco in Gazebo with
 # roslaunch kinova_gazebo robot_launch.launch kinova_robotType:=j2n6s300
+
+
+cProfile.run('re.compile("foo|bar")', 'restats')
 
 rospy.init_node("kinova_client", anonymous=True, log_level=rospy.INFO)
 

@@ -1,0 +1,37 @@
+Timer unit: 1e-06 s
+
+Total time: 37.7961 s
+File: 0_test_jaco_gazebo_action_gym.py
+Function: main at line 48
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    48                                           @profile
+    49                                           def main():
+    50                                           
+    51         4          3.0      0.8      0.0      for episode in range(3):
+    52                                           
+    53         3    6472942.0 2157647.3     17.1          obs = env.reset()
+    54         3          5.0      1.7      0.0          rewards = []
+    55                                           
+    56        18         19.0      1.1      0.0          for t in range(5):
+    57                                           
+    58        15       1489.0     99.3      0.0              action = env.action_space.sample()
+    59        15   31299927.0 2086661.8     82.8              obs, reward, done, info = env.step(action)
+    60                                           
+    61        15        289.0     19.3      0.0              print("timestep:", t)
+    62        15       5672.0    378.1      0.0              print("action: ", action)
+    63        15      11145.0    743.0      0.0              print("observation: ", obs)
+    64        15        150.0     10.0      0.0              print("reward: ", reward)
+    65        15        153.0     10.2      0.0              print("done: ", done)
+    66        15       4275.0    285.0      0.0              print("info: ", info)
+    67                                           
+    68        15         18.0      1.2      0.0              if done:
+    69                                                           rewards.append(reward)
+    70                                                           break
+    71                                           
+    72         3         21.0      7.0      0.0          print("Episode: {}, Cumulated reward: {}".format(episode, sum(rewards)))
+    73         3          8.0      2.7      0.0          print("******************")
+    74                                           
+    75         1         10.0     10.0      0.0      env.close()
+

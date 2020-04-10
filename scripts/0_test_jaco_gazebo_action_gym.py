@@ -11,6 +11,13 @@ from stable_baselines.common.env_checker import check_env
 # roslaunch kinova_gazebo robot_launch.launch kinova_robotType:=j2n6s300
 
 
+# to profile this script
+# kernprof -l 0_test_jaco_gazebo_action_gym.py
+
+# run this to read results
+# python -m line_profiler 0_test_jaco_gazebo_action_gym.py.lprof
+
+
 rospy.init_node("kinova_client", anonymous=True, log_level=rospy.INFO)
 
 env = gym.make('JacoGazebo-v1')
@@ -38,29 +45,34 @@ print(env.observation_space.low)
 # print('random action:', action)
 # obs, reward, done, info = env.step(action)
 
+@profile
+def main():
 
-for episode in range(3):
+    for episode in range(3):
 
-    obs = env.reset()
-    rewards = []
+        obs = env.reset()
+        rewards = []
 
-    for t in range(5):
+        for t in range(5):
 
-        action = env.action_space.sample()
-        obs, reward, done, info = env.step(action)
+            action = env.action_space.sample()
+            obs, reward, done, info = env.step(action)
 
-        print("timestep:", t)
-        print("action: ", action)
-        print("observation: ", obs)
-        print("reward: ", reward)
-        print("done: ", done)
-        print("info: ", info)
+            print("timestep:", t)
+            print("action: ", action)
+            print("observation: ", obs)
+            print("reward: ", reward)
+            print("done: ", done)
+            print("info: ", info)
 
-        if done:
-            rewards.append(reward)
-            break
+            if done:
+                rewards.append(reward)
+                break
 
-    print("Episode: {}, Cumulated reward: {}".format(episode, sum(rewards)))
-    print("******************")
+        print("Episode: {}, Cumulated reward: {}".format(episode, sum(rewards)))
+        print("******************")
 
-env.close()
+    env.close()
+
+
+main()
