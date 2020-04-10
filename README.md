@@ -113,7 +113,7 @@ In terminal 2:
 python3 scripts/0_test_jaco_gazebo_action_gym.py
 ```
 
-# Activate graphic rendering in Gazebo
+### Activate graphic rendering in Gazebo
 By default graphics rendering in Gazebo is disabled. To enable it, edit the launch file
 
 ```
