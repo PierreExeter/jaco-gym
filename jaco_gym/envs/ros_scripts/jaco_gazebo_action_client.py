@@ -15,8 +15,6 @@ from geometry_msgs.msg import Pose, Point
 class JacoGazeboActionClient:
 
     def __init__(self):
-        # removed because it opens a node a each action?
-        # rospy.init_node("kinova_client")
         
         action_address = "/j2n6s300/effort_joint_trajectory_controller/follow_joint_trajectory"
         self.client = actionlib.SimpleActionClient(action_address, FollowJointTrajectoryAction)
@@ -183,6 +181,8 @@ class JacoGazeboActionClient:
         
 
 
+
+# rospy.init_node("kinova_client")
 
 # client = JacoGazeboActionClient()
 # client.cancel_move()

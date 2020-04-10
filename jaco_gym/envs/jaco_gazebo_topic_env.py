@@ -9,9 +9,9 @@ from jaco_gym.envs.ros_scripts.jaco_gazebo_publish_topic import JacoGazeboPublis
 
 
 class JacoEnv(gym.Env):
-    metadata = {'render.modes': ['human']}
 
     def __init__(self):
+        
         self.robot = JacoGazeboPublishTopic()
         
 

@@ -12,8 +12,6 @@ class JacoGazeboPublishTopic:
     
     def __init__(self):
 
-        rospy.init_node('jaco_gazebo_publish_topic_node')
-
         self.pub_topic = '/j2n6s300/effort_joint_trajectory_controller/command'
         self.pub = rospy.Publisher(self.pub_topic, JointTrajectory, queue_size=1)
 

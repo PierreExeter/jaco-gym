@@ -52,8 +52,9 @@
     <remap from="/joint_states" to="/$(arg kinova_robotName)/joint_states"/>    
   </node>
   
-  <node name="command_robot_home_pose" pkg="kinova_control" type="move_robot.py"
+  <!-- Commented by Pierre to reduce the number of scripts running -->
+  <!-- <node name="command_robot_home_pose" pkg="kinova_control" type="move_robot_YO.py"
         respawn="false" output="screen" args="$(arg kinova_robotType)">       
-  </node>
+  </node> -->
  
 </launch>

@@ -9,12 +9,11 @@ from jaco_gym.envs.ros_scripts.jaco_real_action_client import JacoRealActionClie
 
 
 class JacoEnv(gym.Env):
-    metadata = {'render.modes': ['human']}
 
     def __init__(self):
+
         self.robot = JacoRealActionClient()
         
-
     def step(self, action):
         
         # execute action

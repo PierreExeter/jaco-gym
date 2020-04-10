@@ -1,7 +1,6 @@
 import gym
 import numpy as np
 import random
-import rospy
 
 from gym import error, spaces, utils
 from gym.utils import seeding
@@ -12,8 +11,6 @@ from jaco_gym.envs.ros_scripts.jaco_gazebo_action_client import JacoGazeboAction
 class JacoEnv(gym.Env):
 
     def __init__(self):
-
-        rospy.init_node("kinova_client")
 
         self.robot = JacoGazeboActionClient()
 

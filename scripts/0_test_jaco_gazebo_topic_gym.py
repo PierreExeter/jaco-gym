@@ -2,7 +2,9 @@ import gym
 import jaco_gym
 import random
 import numpy as np 
+import rospy
 
+rospy.init_node("kinova_client", anonymous=True, log_level=rospy.INFO)
 
 env = gym.make('JacoGazebo-v0')
 
@@ -36,3 +38,5 @@ state = env.step(action)
 
 
 #     print("time step {}".format(t))
+
+env.close()

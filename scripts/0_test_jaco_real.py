@@ -4,8 +4,10 @@ import random
 import rospy
 
 
+rospy.init_node("kinova_client", anonymous=True, log_level=rospy.INFO)
+
 env = gym.make('JacoReal-v0')
-rospy.init_node('kinova_controller_angles')
+
 
 state = env.reset()
 print("current state: ", state)
@@ -33,3 +35,5 @@ print("current state: ", state)
 
 
 #     print("time step {}".format(t))
+
+env.close()

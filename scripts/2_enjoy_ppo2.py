@@ -9,6 +9,8 @@ from stable_baselines import PPO2
 # first launch Jaco in Gazebo with 
 # roslaunch kinova_gazebo robot_launch.launch kinova_robotType:=j2n6s300
 
+rospy.init_node("kinova_client", anonymous=True, log_level=rospy.INFO)
+
 env_id = 'JacoGazebo-v1'
 log_dir = "../results/"+env_id
 

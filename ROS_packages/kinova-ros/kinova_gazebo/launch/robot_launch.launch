@@ -5,7 +5,7 @@
   <arg name="kinova_robotName" default="$(arg kinova_robotType)"/>
   <arg name="paused" default="true"/>
   <arg name="use_sim_time" default="true"/>
-  <arg name="gui" default="true"/>
+  <arg name="gui" default="false"/>
   <arg name="headless" default="false"/>
   <arg name="debug" default="false"/>
   <arg name="use_trajectory_controller" default="true"/>
@@ -61,31 +61,8 @@
     <arg name="is7dof" value="$(arg is7dof)"/>
   </include>
 
-  <!-- Spawn a sphere into Gazebo -->
-  <!-- <node name="spawn_urdf1" pkg="gazebo_ros" type="spawn_model" args="-file $(find sphere_description)/urdf/sphere.urdf -urdf -x 0.6813734760297568 -y 0.008944453387661751 -z 0.24161611186717846 -model my_sphere1" /> -->
-
-  <!-- Spawn a sphere into Gazebo -->
-  <!-- <node name="spawn_urdf2" pkg="gazebo_ros" type="spawn_model" args="-file $(find sphere_description)/urdf/sphere.urdf -urdf -x 0.7454040125301431 -y 0.027418613146550877 -z 0.20930236920757284 -model my_sphere2" /> -->
-
 <!-- Spawn a sphere into Gazebo -->
-  <node name="spawn_urdf3" pkg="gazebo_ros" type="spawn_model" args="-file $(find sphere_description)/urdf/sphere.urdf -urdf -x 0.9 -y 0 -z 0.23450887489568126 -model my_sphere3" />
-
-<!-- Spawn a sphere into Gazebo -->
-  <!-- <node name="spawn_urdf4" pkg="gazebo_ros" type="spawn_model" args="-file $(find sphere_description)/urdf/sphere.urdf -urdf -x 0.9042576393075531 -y 0.009561934164518436 -z 0.23391659888655425 -model my_sphere4" /> -->
-
-<!-- Spawn a sphere into Gazebo -->
-  <!-- <node name="spawn_urdf5" pkg="gazebo_ros" type="spawn_model" args="-file $(find sphere_description)/urdf/sphere.urdf -urdf -x 0.8600805791113514 -y 0.021593476813263124 -z 0.17426838249745433 -model my_sphere5" /> -->
-
-<!-- Spawn a sphere into Gazebo -->
-  <!-- <node name="spawn_urdf6" pkg="gazebo_ros" type="spawn_model" args="-file $(find sphere_description)/urdf/sphere.urdf -urdf -x 0.904181695171948 -y 0.021378399841924505 -z 0.17455494584222223 -model my_sphere6" /> -->
-
-<!-- Spawn a sphere into Gazebo -->
-  <!-- <node name="spawn_urdf7" pkg="gazebo_ros" type="spawn_model" args="-file $(find sphere_description)/urdf/sphere.urdf -urdf -x 0.8602054890802574 -y 0.0601424463028035 -z 0.19655769761536912 -model my_sphere7" /> -->
-
-<!-- Spawn a sphere into Gazebo -->
-  <!-- <node name="spawn_urdf8" pkg="gazebo_ros" type="spawn_model" args="-file $(find sphere_description)/urdf/sphere.urdf -urdf -x 0.9043073340022609 -y 0.05982879146178924 -z 0.19670796709989885 -model my_sphere8" /> -->
-
-
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find sphere_description)/urdf/sphere.urdf -urdf -x 0.9 -y 0 -z 0.23450887489568126 -model my_sphere3" />
 
   <!-- rqt launch file -->
   <!--  

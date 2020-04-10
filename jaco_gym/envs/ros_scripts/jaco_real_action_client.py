@@ -10,6 +10,7 @@ from geometry_msgs.msg import PoseStamped
 class JacoRealActionClient:
 
   def __init__(self):
+
     self.topic_name = '/j2n6s300_driver/joints_action/joint_angles'
     self.client = actionlib.SimpleActionClient(self.topic_name, ArmJointAnglesAction)
 
