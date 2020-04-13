@@ -261,7 +261,7 @@ kernprof -l 0_test_jaco_gazebo_action_gym.py
 ### Read profiling results line by line
 
 ```bash
-python -m line_profiler 0_test_jaco_gazebo_action_gym.py.lprof
+python -m line_profiler 0_test_jaco_gazebo_action_gym.py.lprof > profiling_result_test.txt
 ```
 
 ## Supported systems

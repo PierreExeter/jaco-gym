@@ -1,0 +1,99 @@
+Segmentation fault (core dumped)
+[gazebo-2] process has died [pid 2316, exit code 139, cmd /opt/ros/kinetic/lib/gazebo_ros/gzserver -u -e ode /home/student/catkin_ws/src/kinova-ros/kinova_gazebo/worlds/jaco.world __name:=gazebo __log:=/home/student/.ros/efc60178-7915-11ea-958a-0242ac110005/gazebo-2.log].
+log file: /home/student/.ros/efc60178-7915-11ea-958a-0242ac110005/gazebo-2*.log
+
+
+[rospy.internal][INFO] 2020-04-08 08:10:29,035: topic[/j2n6s300/joint_states] adding connection to [http://ad5fc0fb7c77:40237/], count 0
+[rospy.internal][INFO] 2020-04-08 08:10:29,073: topic impl's ref count is zero, deleting topic /j2n6s300/joint_states...
+[rospy.internal][INFO] 2020-04-08 08:10:29,073: topic[/j2n6s300/joint_states] removing connection to http://ad5fc0fb7c77:40237/
+[rospy.internal][INFO] 2020-04-08 08:10:29,087: topic[/gazebo/link_states] adding connection to [http://ad5fc0fb7c77:40237/], count 0
+[rospy.internal][INFO] 2020-04-08 08:10:29,108: topic impl's ref count is zero, deleting topic /gazebo/link_states...
+[rospy.internal][INFO] 2020-04-08 08:10:29,108: topic[/gazebo/link_states] removing connection to http://ad5fc0fb7c77:40237/
+[rospy.internal][INFO] 2020-04-08 08:10:32,220: topic[/j2n6s300/joint_states] adding connection to [http://ad5fc0fb7c77:40237/], count 0
+[rospy.internal][INFO] 2020-04-08 08:10:32,249: topic impl's ref count is zero, deleting topic /j2n6s300/joint_states...
+[rospy.internal][INFO] 2020-04-08 08:10:32,250: topic[/j2n6s300/joint_states] removing connection to http://ad5fc0fb7c77:40237/
+
+[rospy.internal][WARNING] 2020-04-08 08:10:32,251: Unknown error initiating TCP/IP socket to ad5fc0fb7c77:34535 (http://ad5fc0fb7c77:40237/): Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 558, in connect
+    self.local_endpoint = self.socket.getsockname()
+AttributeError: 'NoneType' object has no attribute 'getsockname'
+
+[rospy.internal][INFO] 2020-04-08 08:10:32,270: topic[/gazebo/link_states] adding connection to [http://ad5fc0fb7c77:40237/], count 0
+[rospy.internal][INFO] 2020-04-08 08:10:32,301: topic impl's ref count is zero, deleting topic /gazebo/link_states...
+[rospy.internal][INFO] 2020-04-08 08:10:32,302: topic[/gazebo/link_states] removing connection to http://ad5fc0fb7c77:40237/
+[rospy.internal][INFO] 2020-04-08 08:10:35,346: topic[/j2n6s300/joint_states] adding connection to [http://ad5fc0fb7c77:40237/], count 0
+[rospy.internal][INFO] 2020-04-08 08:10:35,379: topic impl's ref count is zero, deleting topic /j2n6s300/joint_states...
+[rospy.internal][INFO] 2020-04-08 08:10:35,379: topic[/j2n6s300/joint_states] removing connection to http://ad5fc0fb7c77:40237/
+[rospy.internal][INFO] 2020-04-08 08:10:38,162: topic[/j2n6s300/joint_states] adding connection to [http://ad5fc0fb7c77:40237/], count 0
+[rospy.internal][INFO] 2020-04-08 08:10:38,180: topic impl's ref count is zero, deleting topic /j2n6s300/joint_states...
+[rospy.internal][INFO] 2020-04-08 08:10:38,180: topic[/j2n6s300/joint_states] removing connection to http://ad5fc0fb7c77:40237/
+
+[rospy.internal][WARNING] 2020-04-08 08:10:38,181: Unknown error initiating TCP/IP socket to ad5fc0fb7c77:34535 (http://ad5fc0fb7c77:40237/): Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 650, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+
+
+[rospy.internal][INFO] 2020-04-08 08:11:22,698: topic[/gazebo/link_states] adding connection to [http://ad5fc0fb7c77:40237/], count 0
+[rospy.internal][INFO] 2020-04-08 08:11:22,714: topic impl's ref count is zero, deleting topic /gazebo/link_states...
+[rospy.internal][INFO] 2020-04-08 08:11:22,715: topic[/gazebo/link_states] removing connection to http://ad5fc0fb7c77:40237/
+[rospy.internal][ERROR] 2020-04-08 08:11:22,719: Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 729, in receive_once
+    self.stat_bytes += recv_buff(sock, b, p.buff_size)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 103, in recv_buff
+    d = sock.recv(buff_size)
+OSError: [Errno 9] Bad file descriptor
+
+
+[rospy.internal][INFO] 2020-04-08 08:11:39,205: topic[/j2n6s300/joint_states] adding connection to [http://ad5fc0fb7c77:40237/], count 0
+[rospy.internal][INFO] 2020-04-08 08:11:39,266: topic impl's ref count is zero, deleting topic /j2n6s300/joint_states...
+[rospy.internal][INFO] 2020-04-08 08:11:39,267: topic[/j2n6s300/joint_states] removing connection to http://ad5fc0fb7c77:40237/
+[rospy.internal][INFO] 2020-04-08 08:11:39,298: topic[/gazebo/link_states] adding connection to [http://ad5fc0fb7c77:40237/], count 0
+[rospy.internal][INFO] 2020-04-08 08:11:39,307: topic impl's ref count is zero, deleting topic /gazebo/link_states...
+[rospy.internal][INFO] 2020-04-08 08:11:39,308: topic[/gazebo/link_states] removing connection to http://ad5fc0fb7c77:40237/
+[rospy.internal][ERROR] 2020-04-08 08:11:39,311: Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 729, in receive_once
+    self.stat_bytes += recv_buff(sock, b, p.buff_size)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 103, in recv_buff
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+
+
+[rospy.internal][INFO] 2020-04-08 08:12:16,964: topic[/gazebo/link_states] adding connection to [http://ad5fc0fb7c77:40237/], count 0
+[rospy.internal][INFO] 2020-04-08 08:12:16,985: topic impl's ref count is zero, deleting topic /gazebo/link_states...
+[rospy.internal][INFO] 2020-04-08 08:12:16,986: topic[/gazebo/link_states] removing connection to http://ad5fc0fb7c77:40237/
+[rospy.internal][INFO] 2020-04-08 08:12:20,159: topic[/j2n6s300/joint_states] adding connection to [http://ad5fc0fb7c77:40237/], count 0
+[rospy.internal][INFO] 2020-04-08 08:12:20,180: topic impl's ref count is zero, deleting topic /j2n6s300/joint_states...
+[rospy.internal][INFO] 2020-04-08 08:12:20,183: topic[/j2n6s300/joint_states] removing connection to http://ad5fc0fb7c77:40237/
+[rospy.internal][INFO] 2020-04-08 08:12:20,205: topic[/gazebo/link_states] adding connection to [http://ad5fc0fb7c77:40237/], count 0
+[rospy.internal][WARNING] 2020-04-08 08:12:20,392: Unknown error initiating TCP/IP socket to ad5fc0fb7c77:34535 (http://ad5fc0fb7c77:40237/): Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 650, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosgraph/network.py", line 362, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+
+[rospy.internal][INFO] 2020-04-08 08:12:20,393: topic[/j2n6s300/effort_joint_trajectory_controller/follow_joint_trajectory/feedback] removing connection to http://ad5fc0fb7c77:40237/
+[rospy.internal][WARNING] 2020-04-08 08:12:20,393: Unknown error initiating TCP/IP socket to ad5fc0fb7c77:34535 (http://ad5fc0fb7c77:40237/): Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 555, in connect
+    self.socket.connect((dest_addr, dest_port))
+ConnectionRefusedError: [Errno 111] Connection refused
+
+
+
+SOLUTION
+https://answers.ros.org/question/296544/gazebo-is-aborting/
+https://answers.ros.org/question/11488/unknown-error-initiating-tcpip-socket/
+https://answers.ros.org/question/202551/nodes-stop-subscribing-over-time/
+
+
+
+
+

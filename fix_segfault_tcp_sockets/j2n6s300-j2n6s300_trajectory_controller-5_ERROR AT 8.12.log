@@ -1,0 +1,33 @@
+[rospy.client][INFO] 2020-04-07 23:23:02,109: init_node, name[/j2n6s300/j2n6s300_trajectory_controller], pid[2425]
+[xmlrpc][INFO] 2020-04-07 23:23:02,110: XML-RPC server binding to 0.0.0.0:0
+[rospy.init][INFO] 2020-04-07 23:23:02,111: ROS Slave URI: [http://ad5fc0fb7c77:38943/]
+[xmlrpc][INFO] 2020-04-07 23:23:02,111: Started XML-RPC server [http://ad5fc0fb7c77:38943/]
+[rospy.impl.masterslave][INFO] 2020-04-07 23:23:02,111: _ready: http://ad5fc0fb7c77:38943/
+[xmlrpc][INFO] 2020-04-07 23:23:02,111: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2020-04-07 23:23:02,112: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2020-04-07 23:23:02,211: registered with master
+[rospy.rosout][INFO] 2020-04-07 23:23:02,211: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-04-07 23:23:02,219: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-04-07 23:23:02,232: initializing /clock core topic
+[rospy.simtime][INFO] 2020-04-07 23:23:02,245: connected to core topic /clock
+[rosout][INFO] 2020-04-07 23:23:02,262: Controller Spawner: Waiting for service controller_manager/load_controller
+[rospy.internal][INFO] 2020-04-07 23:23:02,288: topic[/clock] adding connection to [http://ad5fc0fb7c77:40237/], count 0
+[rospy.internal][INFO] 2020-04-07 23:23:02,464: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2020-04-07 23:23:04,732: Controller Spawner: Waiting for service controller_manager/switch_controller
+[rosout][INFO] 2020-04-07 23:23:04,734: Controller Spawner: Waiting for service controller_manager/unload_controller
+[rosout][INFO] 2020-04-07 23:23:04,744: Loading controller: effort_joint_trajectory_controller
+[rosout][INFO] 2020-04-07 23:23:06,181: Loading controller: effort_finger_trajectory_controller
+[rosout][INFO] 2020-04-07 23:23:06,980: Loading controller: finger_tip_1_position_controller
+[rosout][INFO] 2020-04-07 23:23:07,150: Loading controller: finger_tip_2_position_controller
+[rosout][INFO] 2020-04-07 23:23:07,479: Loading controller: finger_tip_3_position_controller
+[rosout][INFO] 2020-04-07 23:23:07,661: Loading controller: joint_state_controller
+[rosout][INFO] 2020-04-07 23:23:07,702: Controller Spawner: Loaded controllers: effort_joint_trajectory_controller, effort_finger_trajectory_controller, finger_tip_1_position_controller, finger_tip_2_position_controller, finger_tip_3_position_controller, joint_state_controller
+[rosout][INFO] 2020-04-07 23:23:10,152: Started controllers: effort_joint_trajectory_controller, effort_finger_trajectory_controller, finger_tip_1_position_controller, finger_tip_2_position_controller, finger_tip_3_position_controller, joint_state_controller
+[rospy.internal][WARNING] 2020-04-08 08:12:20,393: Unknown error initiating TCP/IP socket to ad5fc0fb7c77:34535 (http://ad5fc0fb7c77:40237/): Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 555, in connect
+    self.socket.connect((dest_addr, dest_port))
+  File "/usr/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 111] Connection refused
+
+[rospy.internal][INFO] 2020-04-08 08:12:20,393: topic[/clock] removing connection to http://ad5fc0fb7c77:40237/
