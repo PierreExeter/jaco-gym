@@ -1,0 +1,36 @@
+Timer unit: 1e-06 s
+
+Total time: 21489.3 s
+
+Could not find file 5_profiling_train_ppo2.py
+Are you sure you are running this program from the same directory
+that you ran the profiler from?
+Continuing without the function's contents.
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    22                                           
+    23                                           
+    24                                           
+    25                                           
+    26         1     241628.0 241628.0      0.0  
+    27                                           
+    28         1          2.0      2.0      0.0  
+    29                                           
+    30                                           
+    31         1          2.0      2.0      0.0  
+    32         1         81.0     81.0      0.0  
+    33                                           
+    34         1     133196.0 133196.0      0.0  
+    35         1        417.0    417.0      0.0  
+    36         1         74.0     74.0      0.0  
+    37                                           
+    38         1    2334413.0 2334413.0      0.0  
+    39                                           
+    40         1    1550123.0 1550123.0      0.0  
+    41         1 21484961794.0 21484961794.0    100.0  
+    42                                           
+    43         1      84513.0  84513.0      0.0  
+    44                                           
+    45         1         51.0     51.0      0.0  
+

@@ -10,18 +10,18 @@ from stable_baselines import PPO2
 
 
 # first launch Jaco in Gazebo with
-# roslaunch kinova_gazebo robot_launch.launch kinova_robotType:=j2n6s300
+# roslaunch kinova_gazebo robot_launch_noRender.launch kinova_robotType:=j2n6s300
+# roslaunch kinova_gazebo robot_launch_render.launch kinova_robotType:=j2n6s300
 
 # to profile this script
 # kernprof -l 5_profiling_train_ppo2.py
 
 # run this to read results
-# python -m line_profiler 5_profiling_train_ppo2.py.lprof
+# python -m line_profiler 5_profiling_train_ppo2.py.lprof > profiling_result_training.txt
 
 
 @profile
 def main():
-
 
     rospy.init_node("kinova_client", anonymous=True, log_level=rospy.INFO)
 
