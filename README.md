@@ -105,30 +105,15 @@ python3 scripts/0_test_jaco_real.py
 
 In terminal 1:
 ```bash
-roslaunch kinova_gazebo robot_launch.launch kinova_robotType:=j2n6s300
+roslaunch kinova_gazebo robot_launch_render.launch kinova_robotType:=j2n6s300     # enable graphic rendering
+# OR
+roslaunch kinova_gazebo robot_launch_noRender.launch kinova_robotType:=j2n6s300   # disable graphic rendering
 ```
 
 In terminal 2:
 ```bash
 python3 scripts/0_test_jaco_gazebo_action_gym.py
 ```
-
-### Activate graphic rendering in Gazebo
-By default graphics rendering in Gazebo is disabled. To enable it, edit the launch file
-
-```
-~/catkin_ws/src/kinova-ros/kinova_gazebo/launch/robot_launch.launch
-```
-and replace 
-```
-  <arg name="gui" default="false"/>
-```
-
-by 
-```
-  <arg name="gui" default="true"/>
-```
-
 
 
 ## Train the agent

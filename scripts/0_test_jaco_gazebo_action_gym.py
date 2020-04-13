@@ -8,14 +8,8 @@ from stable_baselines.common.env_checker import check_env
 
 
 # first launch Jaco in Gazebo with
-# roslaunch kinova_gazebo robot_launch.launch kinova_robotType:=j2n6s300
-
-
-# to profile this script
-# kernprof -l 0_test_jaco_gazebo_action_gym.py
-
-# run this to read results
-# python -m line_profiler 0_test_jaco_gazebo_action_gym.py.lprof
+# roslaunch kinova_gazebo robot_launch_noRender.launch kinova_robotType:=j2n6s300
+# roslaunch kinova_gazebo robot_launch_render.launch kinova_robotType:=j2n6s300
 
 
 rospy.init_node("kinova_client", anonymous=True, log_level=rospy.INFO)
@@ -37,7 +31,6 @@ print('State space:')
 print(env.observation_space)
 print(env.observation_space.high)
 print(env.observation_space.low)
-
 
 
 # obs = env.reset()

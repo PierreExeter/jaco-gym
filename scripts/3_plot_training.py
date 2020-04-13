@@ -7,7 +7,7 @@ from stable_baselines.results_plotter import load_results, ts2xy
 
 
 timesteps = 1e10
-log_dir = "../results/JacoGazebo-v1/"
+log_dir = "../results/10000steps/JacoGazebo-v1/"
 
 W = load_results(log_dir)
 print("results: ", W)
