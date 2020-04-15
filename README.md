@@ -107,7 +107,7 @@ In terminal 1:
 ```bash
 roslaunch kinova_gazebo robot_launch_render.launch kinova_robotType:=j2n6s300     # enable graphic rendering
 # OR
-roslaunch kinova_gazebo robot_launch_noRender.launch kinova_robotType:=j2n6s300   # disable graphic rendering
+roslaunch kinova_gazebo robot_launch_noRender_noSphere.launch kinova_robotType:=j2n6s300   # disable graphic rendering
 ```
 
 In terminal 2:
@@ -149,7 +149,10 @@ python3 scripts/3_plot_results.py
 ## Environment details
 
 ### Observation
-Type: Box(36)
+
+If reading the full state:
+
+Type: Box(36)    
 
 | Num           | Observation                        | Min   | Max  |
 | ------------- | ---------------------------------- | ----- | ---- |
@@ -189,6 +192,27 @@ Type: Box(36)
 | 33            | joint_finger_tip_1 effort (N.m)    | -inf  | inf  |
 | 34            | joint_finger_tip_2 effort (N.m)    | -inf  | inf  |
 | 35            | joint_finger_tip_3 effort (N.m)    | -inf  | inf  |
+
+
+If reading the simplified state:
+
+Type: Box(12)    
+
+
+| Num           | Observation                        | Min   | Max  |
+| ------------- | ---------------------------------- | ----- | ---- |
+| 0             | joint_1 angle (rad)                | -inf  | inf  |
+| 1             | joint_2 angle (rad)                | -inf  | inf  |
+| 2             | joint_3 angle (rad)                | -inf  | inf  |
+| 3             | joint_4 angle (rad)                | -inf  | inf  |
+| 4             | joint_5 angle (rad)                | -inf  | inf  |
+| 5             | joint_6 angle (rad)                | -inf  | inf  |
+| 6            | joint_1 velocity (rad/s)            | -inf  | inf  |
+| 7            | joint_2 velocity (rad/s)            | -inf  | inf  |
+| 8            | joint_3 velocity (rad/s)            | -inf  | inf  |
+| 9            | joint_4 velocity (rad/s)            | -inf  | inf  |
+| 10            | joint_5 velocity (rad/s)           | -inf  | inf  |
+| 11            | joint_6 velocity (rad/s)           | -inf  | inf  |
 
 
 
