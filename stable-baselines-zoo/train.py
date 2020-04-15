@@ -14,7 +14,7 @@ warnings.filterwarnings("ignore", category=UserWarning, module='gym')
 
 import rospy
 import jaco_gym
-import gym_reacher
+# import gym_reacher
 import gym
 import numpy as np
 import yaml

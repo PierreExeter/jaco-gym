@@ -158,6 +158,23 @@ class JacoGazeboActionClient:
         return np.asarray(self.pos + self.vel + self.eff)
 
 
+    def read_state_simple(self):
+        """
+        read state of the joints only (not the finglers) + removed the efforts
+        """
+
+        self.status = rospy.wait_for_message("/j2n6s300/joint_states", JointState)
+        
+        self.joint_names = self.status.name[:6]
+        # print(self.joint_names)
+
+        self.pos = self.status.position[:6]
+        self.vel = self.status.velocity[:6]
+
+        # return self.status
+        return np.asarray(self.pos + self.vel)
+
+
     def get_tip_coord(self):
         self.status = rospy.wait_for_message("/gazebo/link_states", LinkStates)
         # see also topic /tf
@@ -188,9 +205,9 @@ class JacoGazeboActionClient:
 # client.cancel_move()
 # client.move_arm([3, 1.57, 3.14, 0, 0, 0])
 
-# client.move_sphere([1, 1, 1])
+# # client.move_sphere([1, 1, 1])
 
-# # print(client.read_state())
+# print(client.read_state_simple())
 # # print(client.read_state2())
 # print(client.get_tip_coord())   # PB: reading coordinate doesn't wait until the arm has finished moving. SOLUTION: wait for 2s. To improve.
 

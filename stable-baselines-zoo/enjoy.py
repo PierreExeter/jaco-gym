@@ -4,7 +4,7 @@ import argparse
 import pkg_resources
 import importlib
 import warnings
-import gym_reacher
+# import gym_reacher
 import jaco_gym
 import pandas as pd
 import time

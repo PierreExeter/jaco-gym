@@ -8,7 +8,7 @@ from stable_baselines.common.env_checker import check_env
 
 
 # first launch Jaco in Gazebo with
-# roslaunch kinova_gazebo robot_launch_noRender.launch kinova_robotType:=j2n6s300
+# roslaunch kinova_gazebo robot_launch_noRender_noSphere.launch kinova_robotType:=j2n6s300
 # roslaunch kinova_gazebo robot_launch_render.launch kinova_robotType:=j2n6s300
 
 

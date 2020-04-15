@@ -15,7 +15,8 @@ class JacoEnv(gym.Env):
         self.robot = JacoGazeboActionClient()
 
         self.action_dim = 6
-        self.obs_dim = 36
+        # self.obs_dim = 36
+        self.obs_dim = 12   # when using read_state_simple
 
         high = np.ones([self.action_dim])
         self.action_space = gym.spaces.Box(-high, high)
@@ -46,16 +47,17 @@ class JacoEnv(gym.Env):
     def step(self, action):
 
         # convert action from range [-1, 1] to [0, 360] 
-        action = self.action2deg(action)
+        self.action = self.action2deg(action)
 
         # convert to radians    
-        action = np.radians(action)
+        self.action = np.radians(self.action)
 
         # move arm 
-        self.robot.move_arm(action)
+        self.robot.move_arm(self.action)
        
         # get state
-        self.observation = self.robot.read_state()
+        # self.observation = self.robot.read_state()
+        self.observation = self.robot.read_state_simple()   # only return 12 values instead of 36
 
         # calculate reward
         self.tip_coord = self.robot.get_tip_coord()
@@ -90,7 +92,8 @@ class JacoEnv(gym.Env):
         print("Jaco reset to initial position")
 
         # get observation
-        self.obs = self.robot.read_state()
+        # self.obs = self.robot.read_state()
+        self.obs = self.robot.read_state_simple()
 
         # generate random coordinates of a point in space
         # limits of real robot
@@ -106,7 +109,8 @@ class JacoEnv(gym.Env):
         self.target_vect = np.array([x_target, y_target, z_target])
         print("Random target coordinates generated")
 
-        self.robot.move_sphere(self.target_vect)
+        # if rendering: uncomment to move the sphere target
+        # self.robot.move_sphere(self.target_vect)
 
         return self.obs
 
