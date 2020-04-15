@@ -120,7 +120,7 @@ python3 scripts/0_test_jaco_gazebo_action_gym.py
 
 In terminal 1:
 ```bash
-roslaunch kinova_gazebo robot_launch.launch kinova_robotType:=j2n6s300
+roslaunch kinova_gazebo robot_launch_noRender_noSphere.launch kinova_robotType:=j2n6s300 
 ```
 
 In terminal 2:
@@ -145,6 +145,43 @@ python3 scripts/2_enjoy_ppo2.py
 ```bash
 python3 scripts/3_plot_results.py
 ```
+
+
+## Train with Stable Baselines
+
+
+In terminal 1:
+```bash
+roslaunch kinova_gazebo robot_launch_noRender_noSphere.launch kinova_robotType:=j2n6s300 
+```
+
+In terminal 2:
+```bash
+cd stable-baselines-zoo/
+python train.py --algo ppo2 --env JacoGazebo-v1 -n 100000 --seed 0 --log-folder logs/ &> submission_log/log_ppo_jaco.run
+```
+
+
+
+## Enjoy a trained agent with Stable Baselines
+
+In terminal 1:
+```bash
+roslaunch kinova_gazebo robot_launch.launch kinova_robotType:=j2n6s300
+```
+
+In terminal 2:
+```bash
+cd stable-baselines-zoo/
+python enjoy.py --algo ppo2 --env JacoGazebo-v1 -f logs/ --exp-id 0 -n 2000
+```
+
+## Plot stable_baselines results
+
+```bash
+python plot_results.py -f logs/ppo2/JacoGazebo-v1_1/
+```
+
 
 ## Environment details
 
