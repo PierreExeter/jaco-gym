@@ -1,12 +1,932 @@
-/home/pierre/bin/anaconda3/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/home/pierre/bin/anaconda3/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/home/pierre/bin/anaconda3/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/home/pierre/bin/anaconda3/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/home/pierre/bin/anaconda3/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/home/pierre/bin/anaconda3/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/home/data/docker/overlay2/l/QTMY2AP2F6UZ4WXVGUNBRVZNXQ:/home/data/docker/overlay2/l/LNBFYBIL5LXKKXVQAYN5MT6W4V:/home/data/docker/overlay2/l/7UCUUXUXURNSZ3CLWWRYYKYUUI:/home/data/docker/overlay2/l/5FWHO5OTFCBYFE6U2CCOR7VJD3:/home/data/docker/overlay2/l/TYMZOBIGVLAKOJF2Z6QX4YFYO7:/home/data/docker/overlay2/l/4J7SW3SS3KF4FRXOERKSWSY7M6:/home/data/docker/overlay2/l/NROLGPSBU4R4NKNO54KK7YW54P:/home/data/docker/overlay2/l/CYRHQBDPRFCLIXO6K3KRJY5DDX:/home/data/docker/overla'
+Unexpected end of /proc/mounts line `y2/l/XNH4EFGVLUCQ5OV2KEOS7DUASY:/home/data/docker/overlay2/l/P2CMY3PKNOXEAWWMXKPQG3XAK4:/home/data/docker/overlay2/l/BAGHWZOYJCYB7TJBADGDEKFSAX:/home/data/docker/overlay2/l/BP2GVZKCAIXPEEJDS4YK4CYNNT:/home/data/docker/overlay2/l/RHR5CKPLQ6QLXRQTUF6NKWS5S2:/home/data/docker/overlay2/l/PEAYJEFA3SYUPEJQBK7NAX2ZBU:/home/data/docker/overlay2/l/YZEOQOMQJT23TNB2WGJPQ6BT3E:/home/data/docker/overlay2/l/IPEFEMJYVZDEX3N5WHBG6UAQ6P:/home/data/docker/overlay2/l/T7VI7OW6FHEXIBGJUP3A5MW3BJ:/home/data/docker/overlay2/l/EZ'
+Unexpected end of /proc/mounts line `WQQ6VWPUU2SGWTTQGRRY2COR:/home/data/docker/overlay2/l/PCZPWK5PXXWB726OAQRM3MZBPW:/home/data/docker/overlay2/l/NV6HBLYS5CFKKRRKTLRTES6I6B:/home/data/docker/overlay2/l/PO3VVHBLBFRZ6H3V5FJJDBI6ZR:/home/data/docker/overlay2/l/WJ2H4EUFSKAMTRYC5S3UZ7JK5M:/home/data/docker/overlay2/l/VRTAEPUTEERHZ5JAH26LAEXJBD:/home/data/docker/overlay2/l/GZ5P57P5YHD3R3T4TVOLUW3XHA:/home/data/docker/overlay2/l/5PSOLDVKZYYO6CSPM7APINGUNB:/home/data/docker/overlay2/l/E2M3SZB7UVBUZNABBAZUB7KYSA:/home/data/docker/overlay2/l/UQN743KHV'
+Unexpected end of /proc/mounts line `BPNYV4NUW7R2P3HXC:/home/data/docker/overlay2/l/GQYI3GAE4LFRM5UNS22ROTFT5Z:/home/data/docker/overlay2/l/VE47GPZBI7V3GYB5UMO3GRSDUA:/home/data/docker/overlay2/l/N7TFKJ2Z3GQVT4C2OBKGUQKS2H:/home/data/docker/overlay2/l/QBXMSXCHFLXGV2Z6PRZ5UB7G5L:/home/data/docker/overlay2/l/BZW3VYP54MTV7NKV2KQ7NFIEQB:/home/data/docker/overlay2/l/7GTWJDG45IHJXCFU7VTGKOD4M5:/home/data/docker/overlay2/l/GAQKU7HMANK7DJXDT4RD7HMQF7:/home/data/docker/overlay2/l/OOBXIZPAVJQ7F2HHZ2GFLB3UX6:/home/data/docker/overlay2/l/EKKWJSPDLJEYB3SS'
+Unexpected end of /proc/mounts line `FJMEGYGYLO:/home/data/docker/overlay2/l/ZIH5D3AHYJMA3QAIFXJP5IFQQR:/home/data/docker/overlay2/l/BKVUTHDNZGH4H6COKIL7JHZGHG:/home/data/docker/overlay2/l/E5CJBA2ASE4GPZPJEZKUEQ6JEF:/home/data/docker/overlay2/l/TLO6X7CSGUEO6SHQLNWEHNBBLK:/home/data/docker/overlay2/l/RICBWHHYC7OJF7VVHIBZDNO6JJ:/home/data/docker/overlay2/l/KZZP55ELHXQX37FNXJAV7XQXZO:/home/data/docker/overlay2/l/V2XNOJMT4KREOUHPKWL63ZZGMZ,upperdir=/home/data/docker/overlay2/28f7784b5295c97b9b4b9aec266193ae098b37a271dab611aa01e4ed11a6a757/diff,wo'
+--------------------------------------------------------------------------
+[[3956,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ad5fc0fb7c77
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+========== JacoGazebo-v1 ==========
+Seed: 0
+OrderedDict([('cliprange', 0.2),
+             ('ent_coef', 0.0),
+             ('gamma', 0.99),
+             ('lam', 0.95),
+             ('learning_rate', 0.00025),
+             ('n_envs', 1),
+             ('n_steps', 2048),
+             ('n_timesteps', 2000000.0),
+             ('nminibatches', 32),
+             ('noptepochs', 10),
+             ('normalize', True),
+             ('policy', 'MlpPolicy')])
+Using 1 environments
+Overwriting n_timesteps with n=20000
+Normalizing input and reward
+Creating test environment
+Normalization activated: {'norm_reward': False}
+Log path: logs/ppo2/JacoGazebo-v1_3
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+------------------------------------
+| approxkl           | 0.007849289 |
+| clipfrac           | 0.10136719  |
+| ep_len_mean        | 50          |
+| ep_reward_mean     | -21.9       |
+| explained_variance | -0.0956     |
+| fps                | 0           |
+| n_updates          | 1           |
+| policy_entropy     | 8.494925    |
+| policy_loss        | -0.01475428 |
+| serial_timesteps   | 2048        |
+| time_elapsed       | 2.34e-05    |
+| total_timesteps    | 2048        |
+| value_loss         | 0.5727309   |
+------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+-------------------------------------
+| approxkl           | 0.005065168  |
+| clipfrac           | 0.057177734  |
+| ep_len_mean        | 50           |
+| ep_reward_mean     | -22.4        |
+| explained_variance | -0.1         |
+| fps                | 0            |
+| n_updates          | 2            |
+| policy_entropy     | 8.458418     |
+| policy_loss        | -0.010082145 |
+| serial_timesteps   | 4096         |
+| time_elapsed       | 4.42e+03     |
+| total_timesteps    | 4096         |
+| value_loss         | 0.44398445   |
+-------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+-------------------------------------
+| approxkl           | 0.005858792  |
+| clipfrac           | 0.06689453   |
+| ep_len_mean        | 50           |
+| ep_reward_mean     | -22.6        |
+| explained_variance | 0.00468      |
+| fps                | 0            |
+| n_updates          | 3            |
+| policy_entropy     | 8.398211     |
+| policy_loss        | -0.011250672 |
+| serial_timesteps   | 6144         |
+| time_elapsed       | 8.84e+03     |
+| total_timesteps    | 6144         |
+| value_loss         | 0.3608262    |
+-------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+-------------------------------------
+| approxkl           | 0.006682822  |
+| clipfrac           | 0.08676758   |
+| ep_len_mean        | 50           |
+| ep_reward_mean     | -22.6        |
+| explained_variance | -0.00149     |
+| fps                | 0            |
+| n_updates          | 4            |
+| policy_entropy     | 8.338164     |
+| policy_loss        | -0.012774584 |
+| serial_timesteps   | 8192         |
+| time_elapsed       | 1.33e+04     |
+| total_timesteps    | 8192         |
+| value_loss         | 0.29814404   |
+-------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Eval num_timesteps=10000, episode_reward=-14.36 +/- 4.00
+Episode length: 50.00 +/- 0.00
+New best mean reward!
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+-------------------------------------
+| approxkl           | 0.0069432845 |
+| clipfrac           | 0.09233399   |
+| ep_len_mean        | 50           |
+| ep_reward_mean     | -22.8        |
+| explained_variance | -0.051       |
+| fps                | 0            |
+| n_updates          | 5            |
+| policy_entropy     | 8.30193      |
+| policy_loss        | -0.015705906 |
+| serial_timesteps   | 10240        |
+| time_elapsed       | 1.77e+04     |
+| total_timesteps    | 10240        |
+| value_loss         | 0.28751954   |
+-------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+-------------------------------------
+| approxkl           | 0.0071494766 |
+| clipfrac           | 0.09443359   |
+| ep_len_mean        | 50           |
+| ep_reward_mean     | -22.9        |
+| explained_variance | -0.0319      |
+| fps                | 0            |
+| n_updates          | 6            |
+| policy_entropy     | 8.309205     |
+| policy_loss        | -0.015575041 |
+| serial_timesteps   | 12288        |
+| time_elapsed       | 2.27e+04     |
+| total_timesteps    | 12288        |
+| value_loss         | 0.26425365   |
+-------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+-------------------------------------
+| approxkl           | 0.007942789  |
+| clipfrac           | 0.10683594   |
+| ep_len_mean        | 50           |
+| ep_reward_mean     | -22.3        |
+| explained_variance | -0.0462      |
+| fps                | 0            |
+| n_updates          | 7            |
+| policy_entropy     | 8.310429     |
+| policy_loss        | -0.014776275 |
+| serial_timesteps   | 14336        |
+| time_elapsed       | 2.73e+04     |
+| total_timesteps    | 14336        |
+| value_loss         | 0.23540077   |
+-------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| approxkl           | 0.0059105405  |
+| clipfrac           | 0.070458986   |
+| ep_len_mean        | 50            |
+| ep_reward_mean     | -22           |
+| explained_variance | -0.0513       |
+| fps                | 0             |
+| n_updates          | 8             |
+| policy_entropy     | 8.291962      |
+| policy_loss        | -0.0092070475 |
+| serial_timesteps   | 16384         |
+| time_elapsed       | 3.19e+04      |
+| total_timesteps    | 16384         |
+| value_loss         | 0.26486394    |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+-------------------------------------
+| approxkl           | 0.006996038  |
+| clipfrac           | 0.08852539   |
+| ep_len_mean        | 50           |
+| ep_reward_mean     | -22.4        |
+| explained_variance | -0.197       |
+| fps                | 0            |
+| n_updates          | 9            |
+| policy_entropy     | 8.282269     |
+| policy_loss        | -0.013554206 |
+| serial_timesteps   | 18432        |
+| time_elapsed       | 3.65e+04     |
+| total_timesteps    | 18432        |
+| value_loss         | 0.2987507    |
+-------------------------------------
+Saving to logs/ppo2/JacoGazebo-v1_3

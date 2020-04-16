@@ -465,7 +465,7 @@ Reacher6Dof-v0:
 
 JacoGazebo-v1:
   normalize: true
-  n_envs: 8
+  n_envs: 1
   n_timesteps: !!float 2e6
   policy: 'MlpPolicy'
   n_steps: 2048

@@ -31,7 +31,7 @@ def plot_results(log_folder, type_str):
     # x, y = ts2xy(load_results(log_folder), 'episodes')
     # x, y = ts2xy(load_results(log_folder), 'walltime_hrs')
 
-    y = moving_average(y, window=50)
+    y = moving_average(y, window=1)
     # Truncate x
     x = x[len(x) - len(y):]
 
@@ -63,34 +63,34 @@ if __name__ == '__main__':
 
     print("results: ", W)
 
-    # save walltime to stats.csv
-    df = pd.read_csv(log_dir+'stats.csv')  
-    df["Train walltime (s)"] = W["t"].max()
-    df.to_csv(log_dir+"stats.csv", index=False)
-    print(df)
+    # # save walltime to stats.csv
+    # df = pd.read_csv(log_dir+'stats.csv')  
+    # df["Train walltime (s)"] = W["t"].max()
+    # df.to_csv(log_dir+"stats.csv", index=False)
+    # print(df)
 
-    ### plot evaluations
+    # ## plot evaluations
 
-    X = np.load(log_dir+'evaluations.npz')
-    print(X.files)
+    # X = np.load(log_dir+'evaluations.npz')
+    # print(X.files)
 
-    print(X['timesteps'].shape)
-    print(X['results'].shape)
-    print(X['ep_lengths'].shape)
+    # print(X['timesteps'].shape)
+    # print(X['results'].shape)
+    # print(X['ep_lengths'].shape)
 
-    T = X['timesteps']
-    R = X['results']
-    E = X['ep_lengths']
+    # T = X['timesteps']
+    # R = X['results']
+    # E = X['ep_lengths']
 
-    av_reward = []
-    for i in range(len(R)):
-        av_reward.append(np.mean(R[i, :]))
+    # av_reward = []
+    # for i in range(len(R)):
+    #     av_reward.append(np.mean(R[i, :]))
 
-    plt.plot(T, av_reward)
-    plt.xlabel('Number of Timesteps')
-    plt.ylabel('Rewards')
-    plt.savefig(log_dir+"evaluations.png")
-    # plt.show()
+    # plt.plot(T, av_reward)
+    # plt.xlabel('Number of Timesteps')
+    # plt.ylabel('Rewards')
+    # plt.savefig(log_dir+"evaluations.png")
+    # # plt.show()
 
 
     # plot all training rewards
