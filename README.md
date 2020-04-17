@@ -163,7 +163,9 @@ roslaunch kinova_gazebo robot_launch_noRender_noSphere.launch kinova_robotType:=
 In terminal 2:
 ```bash
 cd stable-baselines-zoo/
-python train.py --algo ppo2 --env JacoGazebo-v1 -n 100000 --seed 0 --log-folder logs/ &> submission_log/log_ppo_jaco.run
+python3 train.py --algo ppo2 --env JacoGazebo-v1 -n 100000 --seed 0 --log-folder logs/ppo2/JacoGazebo-v1_100000/ &> submission_log/log_ppo_jaco.run
+python3 train.py --algo sac --env JacoGazebo-v1 -n 100000 --seed 0 --log-folder logs/sac/JacoGazebo-v1_100000/
+python3 train.py --algo td3 --env JacoGazebo-v1 -n 100000 --seed 0 --log-folder logs/td3/JacoGazebo-v1_100000/
 ```
 
 
@@ -183,13 +185,13 @@ self.robot.move_sphere(self.target_vect)
 In terminal 2:
 ```bash
 cd stable-baselines-zoo/
-python enjoy.py --algo ppo2 --env JacoGazebo-v1 -f logs/ --exp-id 0 -n 2000
+python3 enjoy.py --algo ppo2 --env JacoGazebo-v1 -f logs/ --exp-id 0 -n 2000
 ```
 
 ## Plot stable_baselines results
 
 ```bash
-python plot_results.py -f logs/ppo2/JacoGazebo-v1_1/
+python3 plot_results.py -f logs/ppo2/JacoGazebo-v1_1/
 ```
 
 
