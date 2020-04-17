@@ -135,6 +135,11 @@ In terminal 1:
 roslaunch kinova_gazebo robot_launch.launch kinova_robotType:=j2n6s300
 ```
 
+Uncomment this line in jaco_gym/envs/jaco_gazebo_action_env.py
+```python
+self.robot.move_sphere(self.target_vect)
+```
+
 In terminal 2:
 ```bash
 python3 scripts/2_enjoy_ppo2.py
@@ -168,6 +173,11 @@ python train.py --algo ppo2 --env JacoGazebo-v1 -n 100000 --seed 0 --log-folder 
 In terminal 1:
 ```bash
 roslaunch kinova_gazebo robot_launch.launch kinova_robotType:=j2n6s300
+```
+
+Uncomment this line in jaco_gym/envs/jaco_gazebo_action_env.py
+```python
+self.robot.move_sphere(self.target_vect)
 ```
 
 In terminal 2:

@@ -250,3 +250,14 @@ Reacher6Dof-v0:
   gradient_steps: 1
   learning_starts: 1000
 
+
+JacoGazebo-v1:
+  n_timesteps: !!float 1e5
+  policy: 'CustomSACPolicy'
+  learning_rate: lin_3e-4
+  buffer_size: 1000000
+  batch_size: 64
+  ent_coef: 0.01
+  train_freq: 1
+  gradient_steps: 1
+  learning_starts: 1000

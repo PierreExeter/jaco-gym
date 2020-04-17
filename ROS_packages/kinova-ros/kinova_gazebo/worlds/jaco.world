@@ -20,5 +20,13 @@
       </camera>
     </gui>
 
+    <!-- Added by Pierre: simulation speed -->
+    <physics type="ode">
+      <max_step_size>0.0023</max_step_size>
+      <real_time_update_rate>10000</real_time_update_rate>
+     <!--  <real_time_factor>1</real_time_factor>  -->
+    </physics>
+
+
   </world>
 </sdf>

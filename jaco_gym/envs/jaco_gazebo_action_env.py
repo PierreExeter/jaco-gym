@@ -109,7 +109,7 @@ class JacoEnv(gym.Env):
         self.target_vect = np.array([x_target, y_target, z_target])
         print("Random target coordinates generated")
 
-        # if rendering: uncomment to move the sphere target
+        # if testing: graphically move the sphere target, if training, comment this line
         # self.robot.move_sphere(self.target_vect)
 
         return self.obs

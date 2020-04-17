@@ -57,7 +57,11 @@ python train.py --algo td3 --env Pendulum-v0 -n 10000 --eval-freq 10000 --eval-e
 python train.py --algo trpo --env Pendulum-v0 -n 10000 --eval-freq 10000 --eval-episodes 10 --save-freq 100000 --seed 0
 
 python train.py --algo ppo2 --env JacoGazebo-v1 -n 100000 --seed 0 --log-folder logs/ppo2/JacoGazebo-v1_100000/ &> submission_log/log_ppo_jaco.run
+python train.py --algo sac --env JacoGazebo-v1 -n 100000 --seed 0 --log-folder logs/sac/JacoGazebo-v1_100000/ &> submission_log/log_sac_jaco.run   # for some reason, log forwardnig doesn't work
+python train.py --algo td3 --env JacoGazebo-v1 -n 100000 --seed 0 --log-folder logs/td3/JacoGazebo-v1_100000/ &> submission_log/log_td3_jaco.run   # for some reason, log forwardnig doesn't work
 
+python train.py --algo sac --env JacoGazebo-v1 -n 100000 --seed 0 --log-folder logs/sac/JacoGazebo-v1_100000/
+python train.py --algo td3 --env JacoGazebo-v1 -n 100000 --seed 0 --log-folder logs/td3/JacoGazebo-v1_100000/
 
 # train with seeds
 # choose hyperparameters in hyperparameters/a2c.yml and run this

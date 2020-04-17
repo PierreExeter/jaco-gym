@@ -17,9 +17,9 @@ rospy.init_node("kinova_client", anonymous=True, log_level=rospy.INFO)
 env = gym.make('JacoGazebo-v1')
 
 ## It will check your custom environment and output additional warnings if needed
-# print("starting check")
-# check_env(env, warn=True)
-# print("check done")
+print("starting check")
+check_env(env, warn=True)
+print("check done")
 
 
 print('Action space:')
@@ -37,6 +37,8 @@ print(env.observation_space.low)
 # action = env.action_space.sample()
 # print('random action:', action)
 # obs, reward, done, info = env.step(action)
+
+render_flag=True
 
 for episode in range(3):
 
