@@ -1,14 +1,1013 @@
-/home/pierre/bin/anaconda3/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-/home/pierre/bin/anaconda3/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-/home/pierre/bin/anaconda3/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-/home/pierre/bin/anaconda3/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-/home/pierre/bin/anaconda3/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-/home/pierre/bin/anaconda3/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-  np_resource = np.dtype([("resource", np.ubyte, 1)])
-pygame 1.9.6
-Hello from the pygame community. https://www.pygame.org/contribute.html
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/home/data/docker/overlay2/l/QTMY2AP2F6UZ4WXVGUNBRVZNXQ:/home/data/docker/overlay2/l/LNBFYBIL5LXKKXVQAYN5MT6W4V:/home/data/docker/overlay2/l/7UCUUXUXURNSZ3CLWWRYYKYUUI:/home/data/docker/overlay2/l/5FWHO5OTFCBYFE6U2CCOR7VJD3:/home/data/docker/overlay2/l/TYMZOBIGVLAKOJF2Z6QX4YFYO7:/home/data/docker/overlay2/l/4J7SW3SS3KF4FRXOERKSWSY7M6:/home/data/docker/overlay2/l/NROLGPSBU4R4NKNO54KK7YW54P:/home/data/docker/overlay2/l/CYRHQBDPRFCLIXO6K3KRJY5DDX:/home/data/docker/overla'
+Unexpected end of /proc/mounts line `y2/l/XNH4EFGVLUCQ5OV2KEOS7DUASY:/home/data/docker/overlay2/l/P2CMY3PKNOXEAWWMXKPQG3XAK4:/home/data/docker/overlay2/l/BAGHWZOYJCYB7TJBADGDEKFSAX:/home/data/docker/overlay2/l/BP2GVZKCAIXPEEJDS4YK4CYNNT:/home/data/docker/overlay2/l/RHR5CKPLQ6QLXRQTUF6NKWS5S2:/home/data/docker/overlay2/l/PEAYJEFA3SYUPEJQBK7NAX2ZBU:/home/data/docker/overlay2/l/YZEOQOMQJT23TNB2WGJPQ6BT3E:/home/data/docker/overlay2/l/IPEFEMJYVZDEX3N5WHBG6UAQ6P:/home/data/docker/overlay2/l/T7VI7OW6FHEXIBGJUP3A5MW3BJ:/home/data/docker/overlay2/l/EZ'
+Unexpected end of /proc/mounts line `WQQ6VWPUU2SGWTTQGRRY2COR:/home/data/docker/overlay2/l/PCZPWK5PXXWB726OAQRM3MZBPW:/home/data/docker/overlay2/l/NV6HBLYS5CFKKRRKTLRTES6I6B:/home/data/docker/overlay2/l/PO3VVHBLBFRZ6H3V5FJJDBI6ZR:/home/data/docker/overlay2/l/WJ2H4EUFSKAMTRYC5S3UZ7JK5M:/home/data/docker/overlay2/l/VRTAEPUTEERHZ5JAH26LAEXJBD:/home/data/docker/overlay2/l/GZ5P57P5YHD3R3T4TVOLUW3XHA:/home/data/docker/overlay2/l/5PSOLDVKZYYO6CSPM7APINGUNB:/home/data/docker/overlay2/l/E2M3SZB7UVBUZNABBAZUB7KYSA:/home/data/docker/overlay2/l/UQN743KHV'
+Unexpected end of /proc/mounts line `BPNYV4NUW7R2P3HXC:/home/data/docker/overlay2/l/GQYI3GAE4LFRM5UNS22ROTFT5Z:/home/data/docker/overlay2/l/VE47GPZBI7V3GYB5UMO3GRSDUA:/home/data/docker/overlay2/l/N7TFKJ2Z3GQVT4C2OBKGUQKS2H:/home/data/docker/overlay2/l/QBXMSXCHFLXGV2Z6PRZ5UB7G5L:/home/data/docker/overlay2/l/BZW3VYP54MTV7NKV2KQ7NFIEQB:/home/data/docker/overlay2/l/7GTWJDG45IHJXCFU7VTGKOD4M5:/home/data/docker/overlay2/l/GAQKU7HMANK7DJXDT4RD7HMQF7:/home/data/docker/overlay2/l/OOBXIZPAVJQ7F2HHZ2GFLB3UX6:/home/data/docker/overlay2/l/EKKWJSPDLJEYB3SS'
+Unexpected end of /proc/mounts line `FJMEGYGYLO:/home/data/docker/overlay2/l/ZIH5D3AHYJMA3QAIFXJP5IFQQR:/home/data/docker/overlay2/l/BKVUTHDNZGH4H6COKIL7JHZGHG:/home/data/docker/overlay2/l/E5CJBA2ASE4GPZPJEZKUEQ6JEF:/home/data/docker/overlay2/l/TLO6X7CSGUEO6SHQLNWEHNBBLK:/home/data/docker/overlay2/l/RICBWHHYC7OJF7VVHIBZDNO6JJ:/home/data/docker/overlay2/l/KZZP55ELHXQX37FNXJAV7XQXZO:/home/data/docker/overlay2/l/V2XNOJMT4KREOUHPKWL63ZZGMZ,upperdir=/home/data/docker/overlay2/28f7784b5295c97b9b4b9aec266193ae098b37a271dab611aa01e4ed11a6a757/diff,wo'
+--------------------------------------------------------------------------
+[[25684,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ad5fc0fb7c77
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+========== JacoGazebo-v1 ==========
+Seed: 0
+OrderedDict([('batch_size', 100),
+             ('buffer_size', 1000000),
+             ('env_wrapper', 'utils.wrappers.TimeFeatureWrapper'),
+             ('gamma', 0.99),
+             ('gradient_steps', 1000),
+             ('learning_rate', 0.001),
+             ('learning_starts', 10000),
+             ('n_timesteps', 100000.0),
+             ('noise_std', 0.1),
+             ('noise_type', 'normal'),
+             ('policy', 'MlpPolicy'),
+             ('policy_kwargs', 'dict(layers=[400, 300])'),
+             ('train_freq', 1000)])
+Using 1 environments
+Overwriting n_timesteps with n=10000
+Creating test environment
+Applying normal noise with std 0.1
+Log path: logs/td3/JacoGazebo-v1_10000//td3/JacoGazebo-v1_1
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -19.3    |
+| episodes                | 4        |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -19.3    |
+| n_updates               | 0        |
+| time_elapsed            | 120      |
+| total timesteps         | 150      |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.2    |
+| episodes                | 8        |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.2    |
+| n_updates               | 0        |
+| time_elapsed            | 275      |
+| total timesteps         | 350      |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.3    |
+| episodes                | 12       |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.3    |
+| n_updates               | 0        |
+| time_elapsed            | 430      |
+| total timesteps         | 550      |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.3    |
+| episodes                | 16       |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.3    |
+| n_updates               | 0        |
+| time_elapsed            | 586      |
+| total timesteps         | 750      |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.6    |
+| episodes                | 20       |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.6    |
+| n_updates               | 0        |
+| time_elapsed            | 741      |
+| total timesteps         | 950      |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20      |
+| episodes                | 24       |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20      |
+| n_updates               | 0        |
+| time_elapsed            | 897      |
+| total timesteps         | 1150     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -19.9    |
+| episodes                | 28       |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -19.9    |
+| n_updates               | 0        |
+| time_elapsed            | 1051     |
+| total timesteps         | 1350     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.1    |
+| episodes                | 32       |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.1    |
+| n_updates               | 0        |
+| time_elapsed            | 1208     |
+| total timesteps         | 1550     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.1    |
+| episodes                | 36       |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.1    |
+| n_updates               | 0        |
+| time_elapsed            | 1366     |
+| total timesteps         | 1750     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.3    |
+| episodes                | 40       |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.3    |
+| n_updates               | 0        |
+| time_elapsed            | 1522     |
+| total timesteps         | 1950     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.6    |
+| episodes                | 44       |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.6    |
+| n_updates               | 0        |
+| time_elapsed            | 1679     |
+| total timesteps         | 2150     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.6    |
+| episodes                | 48       |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.6    |
+| n_updates               | 0        |
+| time_elapsed            | 1833     |
+| total timesteps         | 2350     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.8    |
+| episodes                | 52       |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.8    |
+| n_updates               | 0        |
+| time_elapsed            | 1989     |
+| total timesteps         | 2550     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.6    |
+| episodes                | 56       |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.6    |
+| n_updates               | 0        |
+| time_elapsed            | 2147     |
+| total timesteps         | 2750     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.6    |
+| episodes                | 60       |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.6    |
+| n_updates               | 0        |
+| time_elapsed            | 2303     |
+| total timesteps         | 2950     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.5    |
+| episodes                | 64       |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.5    |
+| n_updates               | 0        |
+| time_elapsed            | 2460     |
+| total timesteps         | 3150     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.5    |
+| episodes                | 68       |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.5    |
+| n_updates               | 0        |
+| time_elapsed            | 2616     |
+| total timesteps         | 3350     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.4    |
+| episodes                | 72       |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.4    |
+| n_updates               | 0        |
+| time_elapsed            | 2772     |
+| total timesteps         | 3550     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.4    |
+| episodes                | 76       |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.4    |
+| n_updates               | 0        |
+| time_elapsed            | 2930     |
+| total timesteps         | 3750     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.6    |
+| episodes                | 80       |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.6    |
+| n_updates               | 0        |
+| time_elapsed            | 3088     |
+| total timesteps         | 3950     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.6    |
+| episodes                | 84       |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.6    |
+| n_updates               | 0        |
+| time_elapsed            | 3243     |
+| total timesteps         | 4150     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.7    |
+| episodes                | 88       |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.7    |
+| n_updates               | 0        |
+| time_elapsed            | 3400     |
+| total timesteps         | 4350     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.6    |
+| episodes                | 92       |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.6    |
+| n_updates               | 0        |
+| time_elapsed            | 3557     |
+| total timesteps         | 4550     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.6    |
+| episodes                | 96       |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.6    |
+| n_updates               | 0        |
+| time_elapsed            | 3713     |
+| total timesteps         | 4750     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.5    |
+| episodes                | 100      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.5    |
+| n_updates               | 0        |
+| time_elapsed            | 3872     |
+| total timesteps         | 4950     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.6    |
+| episodes                | 104      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.6    |
+| n_updates               | 0        |
+| time_elapsed            | 4029     |
+| total timesteps         | 5150     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.6    |
+| episodes                | 108      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.6    |
+| n_updates               | 0        |
+| time_elapsed            | 4184     |
+| total timesteps         | 5350     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.6    |
+| episodes                | 112      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.6    |
+| n_updates               | 0        |
+| time_elapsed            | 4342     |
+| total timesteps         | 5550     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.7    |
+| episodes                | 116      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.7    |
+| n_updates               | 0        |
+| time_elapsed            | 4497     |
+| total timesteps         | 5750     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.6    |
+| episodes                | 120      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.6    |
+| n_updates               | 0        |
+| time_elapsed            | 4654     |
+| total timesteps         | 5950     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.8    |
+| episodes                | 124      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.8    |
+| n_updates               | 0        |
+| time_elapsed            | 4809     |
+| total timesteps         | 6150     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -21      |
+| episodes                | 128      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -21      |
+| n_updates               | 0        |
+| time_elapsed            | 4964     |
+| total timesteps         | 6350     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -21      |
+| episodes                | 132      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -21      |
+| n_updates               | 0        |
+| time_elapsed            | 5120     |
+| total timesteps         | 6550     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -21      |
+| episodes                | 136      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -21      |
+| n_updates               | 0        |
+| time_elapsed            | 5276     |
+| total timesteps         | 6750     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -21      |
+| episodes                | 140      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -21      |
+| n_updates               | 0        |
+| time_elapsed            | 5431     |
+| total timesteps         | 6950     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.8    |
+| episodes                | 144      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.8    |
+| n_updates               | 0        |
+| time_elapsed            | 5586     |
+| total timesteps         | 7150     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.8    |
+| episodes                | 148      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.8    |
+| n_updates               | 0        |
+| time_elapsed            | 5742     |
+| total timesteps         | 7350     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.7    |
+| episodes                | 152      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.7    |
+| n_updates               | 0        |
+| time_elapsed            | 5897     |
+| total timesteps         | 7550     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.7    |
+| episodes                | 156      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.7    |
+| n_updates               | 0        |
+| time_elapsed            | 6052     |
+| total timesteps         | 7750     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.8    |
+| episodes                | 160      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.8    |
+| n_updates               | 0        |
+| time_elapsed            | 6210     |
+| total timesteps         | 7950     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.8    |
+| episodes                | 164      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.8    |
+| n_updates               | 0        |
+| time_elapsed            | 6366     |
+| total timesteps         | 8150     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.9    |
+| episodes                | 168      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.9    |
+| n_updates               | 0        |
+| time_elapsed            | 6522     |
+| total timesteps         | 8350     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -21      |
+| episodes                | 172      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -21      |
+| n_updates               | 0        |
+| time_elapsed            | 6678     |
+| total timesteps         | 8550     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -21.1    |
+| episodes                | 176      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -21.1    |
+| n_updates               | 0        |
+| time_elapsed            | 6835     |
+| total timesteps         | 8750     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -21      |
+| episodes                | 180      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -21      |
+| n_updates               | 0        |
+| time_elapsed            | 7002     |
+| total timesteps         | 8950     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -21      |
+| episodes                | 184      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -21      |
+| n_updates               | 0        |
+| time_elapsed            | 7165     |
+| total timesteps         | 9150     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.9    |
+| episodes                | 188      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.9    |
+| n_updates               | 0        |
+| time_elapsed            | 7325     |
+| total timesteps         | 9350     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -20.9    |
+| episodes                | 192      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -20.9    |
+| n_updates               | 0        |
+| time_elapsed            | 7486     |
+| total timesteps         | 9550     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -21      |
+| episodes                | 196      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -21      |
+| n_updates               | 0        |
+| time_elapsed            | 7645     |
+| total timesteps         | 9750     |
+--------------------------------------
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+--------------------------------------
+| current_lr              | 0.001    |
+| ep_rewmean              | -21      |
+| episodes                | 200      |
+| eplenmean               | 50       |
+| fps                     | 1        |
+| mean 100 episode reward | -21      |
+| n_updates               | 0        |
+| time_elapsed            | 7805     |
+| total timesteps         | 9950     |
+--------------------------------------
+/usr/local/lib/python3.5/dist-packages/stable_baselines/common/callbacks.py:277: UserWarning: Training and eval env are not of the same type<stable_baselines.common.base_class._UnvecWrapper object at 0x7f856113f6d8> != <stable_baselines.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7f8561145710>
+  "{} != {}".format(self.training_env, self.eval_env))
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Jaco reset to initial position
+Random target coordinates generated
+Eval num_timesteps=10000, episode_reward=-28.15 +/- 2.19
+Episode length: 50.00 +/- 0.00
+New best mean reward!
+Saving to logs/td3/JacoGazebo-v1_10000//td3/JacoGazebo-v1_1

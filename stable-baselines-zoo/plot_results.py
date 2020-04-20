@@ -123,3 +123,5 @@ if __name__ == '__main__':
     plot_results(log_dir, 'walltime_hrs')
     plt.savefig(log_dir+"reward_vs_walltime_smoothed.png")
     # plt.show()
+
+    print(log_dir+"reward_vs_walltime_smoothed.png")
